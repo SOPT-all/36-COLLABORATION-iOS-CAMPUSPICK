@@ -7,21 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6C511E3E2DCCBC6E00DD3A53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511E362DCCBC6E00DD3A53 /* AppDelegate.swift */; };
 		6C511E3F2DCCBC6E00DD3A53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511E3B2DCCBC6E00DD3A53 /* SceneDelegate.swift */; };
 		6C511E402DCCBC6E00DD3A53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511E3C2DCCBC6E00DD3A53 /* ViewController.swift */; };
 		6C511E412DCCBC6E00DD3A53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C511E372DCCBC6E00DD3A53 /* Assets.xcassets */; };
 		6C511E432DCCBC6E00DD3A53 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6C511E3A2DCCBC6E00DD3A53 /* LaunchScreen.storyboard */; };
+		6C511E472DCCE36100DD3A53 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511E452DCCE36100DD3A53 /* AppDelegate.swift */; };
+		6C511F232DCCE56500DD3A53 /* UICollectionViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511F222DCCE56500DD3A53 /* UICollectionViewCell+.swift */; };
+		6C511F252DCCE59500DD3A53 /* UIStackView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511F242DCCE59500DD3A53 /* UIStackView+.swift */; };
+		6C511F272DCCE5C500DD3A53 /* UITableViewCell+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511F262DCCE5C500DD3A53 /* UITableViewCell+.swift */; };
+		6C511F292DCCE5D900DD3A53 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511F282DCCE5D900DD3A53 /* UIView+.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6C511E0E2DCCBBB100DD3A53 /* 36-COLLABORATION-iOS-CAMPUSPICK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "36-COLLABORATION-iOS-CAMPUSPICK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6C511E362DCCBC6E00DD3A53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6C511E372DCCBC6E00DD3A53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C511E382DCCBC6E00DD3A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6C511E392DCCBC6E00DD3A53 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6C511E3B2DCCBC6E00DD3A53 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		6C511E3C2DCCBC6E00DD3A53 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6C511E452DCCE36100DD3A53 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		6C511F222DCCE56500DD3A53 /* UICollectionViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UICollectionViewCell+.swift"; sourceTree = "<group>"; };
+		6C511F242DCCE59500DD3A53 /* UIStackView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStackView+.swift"; sourceTree = "<group>"; };
+		6C511F262DCCE5C500DD3A53 /* UITableViewCell+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableViewCell+.swift"; sourceTree = "<group>"; };
+		6C511F282DCCE5D900DD3A53 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +62,114 @@
 		6C511E3D2DCCBC6E00DD3A53 /* 36-COLLABORATION-iOS-CAMPUSPICK */ = {
 			isa = PBXGroup;
 			children = (
-				6C511E362DCCBC6E00DD3A53 /* AppDelegate.swift */,
-				6C511E372DCCBC6E00DD3A53 /* Assets.xcassets */,
-				6C511E382DCCBC6E00DD3A53 /* Info.plist */,
-				6C511E3A2DCCBC6E00DD3A53 /* LaunchScreen.storyboard */,
-				6C511E3B2DCCBC6E00DD3A53 /* SceneDelegate.swift */,
+				6C511E462DCCE36100DD3A53 /* Application */,
+				6C511E492DCCE37900DD3A53 /* Global */,
+				6C511E4F2DCCE42400DD3A53 /* Network */,
+				6C511E512DCCE43C00DD3A53 /* Presentation */,
 				6C511E3C2DCCBC6E00DD3A53 /* ViewController.swift */,
 			);
 			path = "36-COLLABORATION-iOS-CAMPUSPICK";
+			sourceTree = "<group>";
+		};
+		6C511E462DCCE36100DD3A53 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				6C511E452DCCE36100DD3A53 /* AppDelegate.swift */,
+				6C511E3B2DCCBC6E00DD3A53 /* SceneDelegate.swift */,
+				6C511E382DCCBC6E00DD3A53 /* Info.plist */,
+				6C511E3A2DCCBC6E00DD3A53 /* LaunchScreen.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		6C511E492DCCE37900DD3A53 /* Global */ = {
+			isa = PBXGroup;
+			children = (
+				6C511E532DCCE46600DD3A53 /* Components */,
+				6C511E4D2DCCE41100DD3A53 /* Extensions */,
+				6C511E4B2DCCE3A800DD3A53 /* Resources */,
+			);
+			path = Global;
+			sourceTree = "<group>";
+		};
+		6C511E4B2DCCE3A800DD3A53 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6C511E552DCCE48400DD3A53 /* Fonts */,
+				6C511E372DCCBC6E00DD3A53 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		6C511E4D2DCCE41100DD3A53 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				6C511F282DCCE5D900DD3A53 /* UIView+.swift */,
+				6C511F262DCCE5C500DD3A53 /* UITableViewCell+.swift */,
+				6C511F242DCCE59500DD3A53 /* UIStackView+.swift */,
+				6C511F222DCCE56500DD3A53 /* UICollectionViewCell+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		6C511E4F2DCCE42400DD3A53 /* Network */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Network;
+			sourceTree = "<group>";
+		};
+		6C511E512DCCE43C00DD3A53 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				6C511E622DCCE4F500DD3A53 /* TabBar */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		6C511E532DCCE46600DD3A53 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		6C511E552DCCE48400DD3A53 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		6C511E5F2DCCE4F500DD3A53 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6C511E602DCCE4F500DD3A53 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6C511E612DCCE4F500DD3A53 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6C511E622DCCE4F500DD3A53 /* TabBar */ = {
+			isa = PBXGroup;
+			children = (
+				6C511E5F2DCCE4F500DD3A53 /* Model */,
+				6C511E602DCCE4F500DD3A53 /* View */,
+				6C511E612DCCE4F500DD3A53 /* ViewController */,
+			);
+			path = TabBar;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +245,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6C511E3E2DCCBC6E00DD3A53 /* AppDelegate.swift in Sources */,
+				6C511F252DCCE59500DD3A53 /* UIStackView+.swift in Sources */,
+				6C511E472DCCE36100DD3A53 /* AppDelegate.swift in Sources */,
+				6C511F292DCCE5D900DD3A53 /* UIView+.swift in Sources */,
 				6C511E3F2DCCBC6E00DD3A53 /* SceneDelegate.swift in Sources */,
+				6C511F272DCCE5C500DD3A53 /* UITableViewCell+.swift in Sources */,
+				6C511F232DCCE56500DD3A53 /* UICollectionViewCell+.swift in Sources */,
 				6C511E402DCCBC6E00DD3A53 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -166,7 +278,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3RFJ9FQWHA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "36-COLLABORATION-iOS-CAMPUSPICK/Info.plist";
+				INFOPLIST_FILE = "36-COLLABORATION-iOS-CAMPUSPICK/Application/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -193,7 +305,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 3RFJ9FQWHA;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "36-COLLABORATION-iOS-CAMPUSPICK/Info.plist";
+				INFOPLIST_FILE = "36-COLLABORATION-iOS-CAMPUSPICK/Application/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
