@@ -20,6 +20,10 @@
 		6C9944062DD0EBFE0016BF5B /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C9944022DD0EBFE0016BF5B /* Pretendard-Medium.otf */; };
 		6C9944072DD0EBFE0016BF5B /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C9944032DD0EBFE0016BF5B /* Pretendard-Regular.otf */; };
 		6C9944082DD0EBFE0016BF5B /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 6C9944012DD0EBFE0016BF5B /* Pretendard-Bold.otf */; };
+		6C99440A2DD0ED830016BF5B /* UIFont+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9944092DD0ED830016BF5B /* UIFont+.swift */; };
+		6C9944CB2DD0F1570016BF5B /* NSAttributedString+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9944CA2DD0F1570016BF5B /* NSAttributedString+.swift */; };
+		6C9944CE2DD0F2A00016BF5B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6C9944CD2DD0F2A00016BF5B /* SnapKit */; };
+		6C9944D12DD0F2AA0016BF5B /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 6C9944D02DD0F2AA0016BF5B /* Then */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,8 @@
 		6C9944022DD0EBFE0016BF5B /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		6C9944032DD0EBFE0016BF5B /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		6C9944042DD0EBFE0016BF5B /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		6C9944092DD0ED830016BF5B /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
+		6C9944CA2DD0F1570016BF5B /* NSAttributedString+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -45,6 +51,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C9944CE2DD0F2A00016BF5B /* SnapKit in Frameworks */,
+				6C9944D12DD0F2AA0016BF5B /* Then in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -116,6 +124,8 @@
 				6C511F262DCCE5C500DD3A53 /* UITableViewCell+.swift */,
 				6C511F242DCCE59500DD3A53 /* UIStackView+.swift */,
 				6C511F222DCCE56500DD3A53 /* UICollectionViewCell+.swift */,
+				6C9944092DD0ED830016BF5B /* UIFont+.swift */,
+				6C9944CA2DD0F1570016BF5B /* NSAttributedString+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -201,6 +211,8 @@
 			);
 			name = "36-COLLABORATION-iOS-CAMPUSPICK";
 			packageProductDependencies = (
+				6C9944CD2DD0F2A00016BF5B /* SnapKit */,
+				6C9944D02DD0F2AA0016BF5B /* Then */,
 			);
 			productName = "36-COLLABORATION-iOS-CAMPUSPICK";
 			productReference = 6C511E0E2DCCBBB100DD3A53 /* 36-COLLABORATION-iOS-CAMPUSPICK.app */;
@@ -230,6 +242,10 @@
 			);
 			mainGroup = 6C511E052DCCBBB100DD3A53;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				6C9944CC2DD0F2A00016BF5B /* XCRemoteSwiftPackageReference "SnapKit" */,
+				6C9944CF2DD0F2AA0016BF5B /* XCRemoteSwiftPackageReference "Then" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 6C511E0F2DCCBBB100DD3A53 /* Products */;
 			projectDirPath = "";
@@ -261,12 +277,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6C99440A2DD0ED830016BF5B /* UIFont+.swift in Sources */,
 				6C511F252DCCE59500DD3A53 /* UIStackView+.swift in Sources */,
 				6C511E472DCCE36100DD3A53 /* AppDelegate.swift in Sources */,
 				6C511F292DCCE5D900DD3A53 /* UIView+.swift in Sources */,
 				6C511E3F2DCCBC6E00DD3A53 /* SceneDelegate.swift in Sources */,
 				6C511F272DCCE5C500DD3A53 /* UITableViewCell+.swift in Sources */,
 				6C511F232DCCE56500DD3A53 /* UICollectionViewCell+.swift in Sources */,
+				6C9944CB2DD0F1570016BF5B /* NSAttributedString+.swift in Sources */,
 				6C511E402DCCBC6E00DD3A53 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -482,6 +500,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		6C9944CC2DD0F2A00016BF5B /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
+		6C9944CF2DD0F2AA0016BF5B /* XCRemoteSwiftPackageReference "Then" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/devxoul/Then.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		6C9944CD2DD0F2A00016BF5B /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C9944CC2DD0F2A00016BF5B /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
+		};
+		6C9944D02DD0F2AA0016BF5B /* Then */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 6C9944CF2DD0F2AA0016BF5B /* XCRemoteSwiftPackageReference "Then" */;
+			productName = Then;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 6C511E062DCCBBB100DD3A53 /* Project object */;
 }

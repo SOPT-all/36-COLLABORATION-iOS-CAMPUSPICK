@@ -7,12 +7,24 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+import SnapKit
+import Then
 
+class ViewController: UIViewController {
+    private let label = UILabel().then {
+        $0.attributedText = .sopt("테스트 폰트", style: .heading0)
+        $0.textColor = .white
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.view.backgroundColor = .red
-        // Do any additional setup after loading the view.
+        
+        view.addSubview(label)
+        label.snp.makeConstraints { make in
+            make.center.equalToSuperview()
+        }
     }
 
 
