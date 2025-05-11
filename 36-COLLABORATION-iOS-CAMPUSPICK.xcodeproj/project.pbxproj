@@ -140,7 +140,9 @@
 		6C511E512DCCE43C00DD3A53 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				6C511E622DCCE4F500DD3A53 /* TabBar */,
+				6C9946612DD0FBEC0016BF5B /* Search */,
+				6C9946652DD0FBED0016BF5B /* Club */,
+				6C9946692DD0FBEF0016BF5B /* Home */,
 			);
 			path = Presentation;
 			sourceTree = "<group>";
@@ -163,35 +165,97 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		6C511E5F2DCCE4F500DD3A53 /* Model */ = {
+		6C99465E2DD0FBEC0016BF5B /* Model */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Model;
 			sourceTree = "<group>";
 		};
-		6C511E602DCCE4F500DD3A53 /* View */ = {
+		6C99465F2DD0FBEC0016BF5B /* View */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		6C511E612DCCE4F500DD3A53 /* ViewController */ = {
+		6C9946602DD0FBEC0016BF5B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = ViewController;
 			sourceTree = "<group>";
 		};
-		6C511E622DCCE4F500DD3A53 /* TabBar */ = {
+		6C9946612DD0FBEC0016BF5B /* Search */ = {
 			isa = PBXGroup;
 			children = (
-				6C511E5F2DCCE4F500DD3A53 /* Model */,
-				6C511E602DCCE4F500DD3A53 /* View */,
-				6C511E612DCCE4F500DD3A53 /* ViewController */,
+				6C99465E2DD0FBEC0016BF5B /* Model */,
+				6C99465F2DD0FBEC0016BF5B /* View */,
+				6C9946602DD0FBEC0016BF5B /* ViewController */,
 			);
-			path = TabBar;
+			path = Search;
+			sourceTree = "<group>";
+		};
+		6C9946622DD0FBED0016BF5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6C9946632DD0FBED0016BF5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6C9946642DD0FBED0016BF5B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		6C9946652DD0FBED0016BF5B /* Club */ = {
+			isa = PBXGroup;
+			children = (
+				6C9946622DD0FBED0016BF5B /* Model */,
+				6C9946632DD0FBED0016BF5B /* View */,
+				6C9946642DD0FBED0016BF5B /* ViewController */,
+			);
+			path = Club;
+			sourceTree = "<group>";
+		};
+		6C9946662DD0FBEF0016BF5B /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		6C9946672DD0FBEF0016BF5B /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		6C9946682DD0FBEF0016BF5B /* VIewController */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = VIewController;
+			sourceTree = "<group>";
+		};
+		6C9946692DD0FBEF0016BF5B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				6C9946662DD0FBEF0016BF5B /* Model */,
+				6C9946672DD0FBEF0016BF5B /* View */,
+				6C9946682DD0FBEF0016BF5B /* VIewController */,
+			);
+			path = Home;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
