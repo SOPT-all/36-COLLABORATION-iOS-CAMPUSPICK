@@ -11,7 +11,9 @@ final class ClubViewController: UIViewController {
     
     // MARK: - Property
     
-    private let scrollview = UIScrollView()
+    private let scrollview = UIScrollView().then {
+        $0.showsVerticalScrollIndicator = false
+    }
     private let contentView = UIView()
     private var headerView = ClubHeaderView()
     private let seperatorView1 = UIView().then {

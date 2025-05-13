@@ -16,6 +16,12 @@ class RankingView: UIView {
         $0.textColor = .black
     }
     
+    private let moreButton = UIButton().then {
+        $0.setTitle("더보기", for: .normal)
+        $0.titleLabel?.attributedText = .sopt("더보기", style: .body3)
+        $0.setTitleColor(.gray2, for: .normal)
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -30,13 +36,18 @@ class RankingView: UIView {
     }
     
     private func setUI() {
-        self.addSubviews(titleLabel)
+        self.addSubviews(titleLabel, moreButton)
     }
     
     private func setLayout() {
         titleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().inset(12)
             $0.leading.equalToSuperview().inset(15)
+        }
+        
+        moreButton.snp.makeConstraints {
+            $0.centerY.equalTo(titleLabel)
+            $0.trailing.equalToSuperview().inset(15)
         }
     }
     

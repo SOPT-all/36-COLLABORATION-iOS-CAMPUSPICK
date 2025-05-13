@@ -71,7 +71,7 @@ class ClubHeaderView: UIView {
         setUI()
         setLayout()
         setDelegate()
-        setActionRegister()
+        setAddTarget()
     }
     
     required init?(coder: NSCoder) {
@@ -148,7 +148,7 @@ class ClubHeaderView: UIView {
         }
     }
     
-    private func setActionRegister() {
+    private func setAddTarget() {
         backButtonContainerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(backButtonTapped)))
     }
 
