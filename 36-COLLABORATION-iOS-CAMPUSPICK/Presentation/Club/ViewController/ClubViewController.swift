@@ -19,13 +19,17 @@ final class ClubViewController: UIViewController {
         setLayout()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationController?.isNavigationBarHidden = true
+    }
+    
     private func setUI() {
         self.view.addSubview(headerView)
     }
     
     private func setLayout() {
         headerView.snp.makeConstraints {
-            $0.top.equalToSuperview()
+            $0.top.equalTo(self.view.safeAreaLayoutGuide.snp.top)
             $0.horizontalEdges.equalToSuperview()
             $0.height.equalTo(150)
         }
