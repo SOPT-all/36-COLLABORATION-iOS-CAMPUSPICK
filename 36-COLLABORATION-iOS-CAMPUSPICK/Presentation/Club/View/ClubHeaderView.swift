@@ -21,7 +21,7 @@ protocol ClubHeaderTypeProtocol: AnyObject {
 
 // protocol 상속 받기.
 class ClubHeaderView: UIView {
-    private let backButtonView = UIView().then {
+    private let backButtonContainerView = UIView().then {
         $0.isUserInteractionEnabled = true
     }
     
@@ -46,11 +46,29 @@ class ClubHeaderView: UIView {
         $0.attributedText = .sopt("내 활동", style: .heading2)
         $0.textColor = .mainBlue
     }
+
+    private let searchContainerView = UIView().then {
+        $0.backgroundColor = .gray4
+        $0.layer.cornerRadius = 25
+    }
+
+    private let searchIcon = UIImageView().then {
+        $0.image = UIImage(systemName: "magnifyingglass")
+        $0.tintColor = .gray2
+        $0.contentMode = .scaleAspectFit
+    }
+
+    private let searchTextField = UITextField().then {
+        $0.attributedPlaceholder = .sopt("찾으시는 동아리가 있나요?", style: .body3)
+        $0.attributedText = .sopt("", style: .body3)
+        $0.font = .soptFont(.body3)
+        $0.textColor = .black
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        self.backgroundColor = .gray3
+//        self.backgroundColor = .gray3
         
         setUI()
         setLayout()
@@ -62,50 +80,67 @@ class ClubHeaderView: UIView {
     }
     
     private func setUI() {
-        self.addSubviews(backButtonView, titleLabel, myActivityLabel)
+        self.addSubviews(backButtonContainerView, titleLabel, myActivityLabel,searchContainerView)
         
-        backButtonView.addSubviews(backButton, backButtonTitle)
+        backButtonContainerView.addSubviews(backButton, backButtonTitle)
+        searchContainerView.addSubviews(searchIcon, searchTextField)
     }
     
     private func setLayout() {
-        backButtonView.snp.makeConstraints {
+        backButtonContainerView.snp.makeConstraints {
             $0.leading.equalToSuperview().inset(15)
             $0.top.equalToSuperview().inset(10)
             $0.width.equalTo(50)
             $0.height.equalTo(21)
         }
-        
+
         backButton.snp.makeConstraints {
             $0.leading.equalToSuperview()
             $0.top.equalToSuperview()
             $0.width.equalTo(12)
             $0.height.equalTo(21)
         }
-        
+
         backButtonTitle.snp.makeConstraints {
             $0.leading.equalTo(backButton.snp.trailing).offset(7)
             $0.centerY.equalTo(backButton)
         }
-        
+
         titleLabel.snp.makeConstraints {
             $0.centerX.equalToSuperview()
             $0.top.equalToSuperview().inset(10)
         }
-        
+
         myActivityLabel.snp.makeConstraints {
             $0.trailing.equalToSuperview().inset(15)
             $0.top.equalToSuperview().inset(10)
         }
-        
+
+        searchContainerView.snp.makeConstraints {
+            $0.top.equalTo(backButtonContainerView.snp.bottom).offset(25)
+            $0.leading.trailing.equalToSuperview().inset(15)
+            $0.height.equalTo(38)
+        }
+
+        searchIcon.snp.makeConstraints {
+            $0.centerY.equalToSuperview()
+            $0.trailing.equalToSuperview().inset(10)
+            $0.width.height.equalTo(18)
+        }
+
+        searchTextField.snp.makeConstraints {
+            $0.leading.equalToSuperview().inset(12)
+            $0.trailing.equalTo(searchIcon.snp.leading).offset(-10)
+            $0.centerY.equalToSuperview()
+        }
     }
     
-    //
+    
     private func setActionRegister() {
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backButtonTapped))
-        backButtonView.addGestureRecognizer(tapGesture)
+        backButtonContainerView.addGestureRecognizer(tapGesture)
     }
 
-    
 
 }
 
