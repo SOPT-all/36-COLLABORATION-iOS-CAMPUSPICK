@@ -40,7 +40,7 @@ class ClubHeaderView: UIView {
 
     private let searchContainerView = UIView().then {
         $0.backgroundColor = .gray4
-        $0.layer.cornerRadius = 25
+        $0.layer.cornerRadius = 18
     }
 
     private let searchIcon = UIImageView().then {
@@ -65,6 +65,10 @@ class ClubHeaderView: UIView {
             $0.showsHorizontalScrollIndicator = false
         }
     
+    private let seperatorView = UIView().then {
+        $0.backgroundColor = .gray4
+    }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
                 
@@ -79,7 +83,7 @@ class ClubHeaderView: UIView {
     }
     
     private func setUI() {
-        self.addSubviews(backButtonContainerView, titleLabel, myActivityLabel, searchContainerView, collectionView)
+        self.addSubviews(backButtonContainerView, titleLabel, myActivityLabel, searchContainerView, collectionView, seperatorView)
         
         backButtonContainerView.addSubviews(backButton, backButtonTitle)
         searchContainerView.addSubviews(searchIcon, searchTextField)
@@ -135,10 +139,19 @@ class ClubHeaderView: UIView {
         }
         
         collectionView.snp.makeConstraints {
-            $0.top.equalTo(searchContainerView.snp.bottom).offset(15)
+            $0.top.equalTo(searchContainerView.snp.bottom).offset(13)
             $0.leading.trailing.equalToSuperview().inset(15)
-            $0.height.equalTo(35)
+            $0.height.equalTo(30)
         }
+        
+        seperatorView.snp.makeConstraints {
+            $0.top.equalTo(collectionView.snp.bottom).offset(15)
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(7)
+        }
+        
+        
+        
     }
     
     private func setDelegate() {
@@ -188,6 +201,6 @@ extension ClubHeaderView: UICollectionViewDelegateFlowLayout {
         
         let tmpLabel : UILabel = UILabel()
         tmpLabel.text = CategoryType.allCases[indexPath.item].title()
-        return CGSize(width: Int(tmpLabel.intrinsicContentSize.width) + 30, height: 35)
+        return CGSize(width: Int(tmpLabel.intrinsicContentSize.width) + 10, height: 26)
     }
 }

@@ -7,12 +7,15 @@
 
 import UIKit
 
+import SnapKit
+import Then
+
 class HeaderCategoryCollectionViewCell: UICollectionViewCell {
     private let containerView = UIView().then {
-        $0.layer.cornerRadius = 18
+        $0.layer.cornerRadius = 13
     }
     
-    private let title = UILabel()
+    private let titleLabel = UILabel()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -28,7 +31,7 @@ class HeaderCategoryCollectionViewCell: UICollectionViewCell {
     
     private func setUI() {
         self.addSubviews(containerView)
-        containerView.addSubview(title)
+        containerView.addSubview(titleLabel)
     }
     
     private func setLayout() {
@@ -36,7 +39,7 @@ class HeaderCategoryCollectionViewCell: UICollectionViewCell {
             $0.edges.equalToSuperview()
         }
         
-        title.snp.makeConstraints {
+        titleLabel.snp.makeConstraints {
             $0.center.equalToSuperview()
         }
     }
@@ -46,7 +49,7 @@ class HeaderCategoryCollectionViewCell: UICollectionViewCell {
         tmpLabel.text = title
         
         if title == "전체" {
-            self.title.do {
+            self.titleLabel.do {
                 $0.attributedText = .sopt(title, style: .body1)
                 $0.textColor = .white
                 $0.backgroundColor = .mainBlue
@@ -56,7 +59,7 @@ class HeaderCategoryCollectionViewCell: UICollectionViewCell {
                 $0.backgroundColor = .mainBlue
             }
         } else {
-            self.title.do {
+            self.titleLabel.do {
                 $0.attributedText = .sopt(title, style: .body2)
                 $0.textColor = .gray1
                 $0.backgroundColor = .gray4
