@@ -8,7 +8,7 @@
 import UIKit
 
 final class ClubViewController: UIViewController {
-    private var headerView = UIView()
+    private var headerView = ClubHeaderView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +24,11 @@ final class ClubViewController: UIViewController {
     }
     
     private func setLayout() {
-        
+        headerView.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.horizontalEdges.equalToSuperview()
+            $0.height.equalTo(150)
+        }
     }
     
 
