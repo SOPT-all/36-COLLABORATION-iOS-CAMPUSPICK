@@ -12,6 +12,8 @@
 		6C231A102DD3B77B00C5F0E8 /* CategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A0F2DD3B77B00C5F0E8 /* CategoryType.swift */; };
 		6C231A142DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A132DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift */; };
 		6C231A162DD3CAB900C5F0E8 /* PopularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A152DD3CAB900C5F0E8 /* PopularView.swift */; };
+		6C231A182DD3CDA200C5F0E8 /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A172DD3CDA200C5F0E8 /* RankingView.swift */; };
+		6C231A1A2DD3D0A400C5F0E8 /* FindClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A192DD3D0A400C5F0E8 /* FindClubView.swift */; };
 		6C511E3F2DCCBC6E00DD3A53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511E3B2DCCBC6E00DD3A53 /* SceneDelegate.swift */; };
 		6C511E402DCCBC6E00DD3A53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511E3C2DCCBC6E00DD3A53 /* ViewController.swift */; };
 		6C511E412DCCBC6E00DD3A53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C511E372DCCBC6E00DD3A53 /* Assets.xcassets */; };
@@ -38,6 +40,8 @@
 		6C231A0F2DD3B77B00C5F0E8 /* CategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryType.swift; sourceTree = "<group>"; };
 		6C231A132DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		6C231A152DD3CAB900C5F0E8 /* PopularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularView.swift; sourceTree = "<group>"; };
+		6C231A172DD3CDA200C5F0E8 /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
+		6C231A192DD3D0A400C5F0E8 /* FindClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindClubView.swift; sourceTree = "<group>"; };
 		6C511E0E2DCCBBB100DD3A53 /* 36-COLLABORATION-iOS-CAMPUSPICK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "36-COLLABORATION-iOS-CAMPUSPICK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C511E372DCCBC6E00DD3A53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C511E382DCCBC6E00DD3A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -239,6 +243,8 @@
 				6C231A122DD3B9DA00C5F0E8 /* Cell */,
 				6C231A092DD39BC600C5F0E8 /* ClubHeaderView.swift */,
 				6C231A152DD3CAB900C5F0E8 /* PopularView.swift */,
+				6C231A172DD3CDA200C5F0E8 /* RankingView.swift */,
+				6C231A192DD3D0A400C5F0E8 /* FindClubView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -376,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C99440A2DD0ED830016BF5B /* UIFont+.swift in Sources */,
+				6C231A182DD3CDA200C5F0E8 /* RankingView.swift in Sources */,
 				6C231A162DD3CAB900C5F0E8 /* PopularView.swift in Sources */,
 				6C511F252DCCE59500DD3A53 /* UIStackView+.swift in Sources */,
 				6C511E472DCCE36100DD3A53 /* AppDelegate.swift in Sources */,
@@ -388,6 +395,7 @@
 				6C511F232DCCE56500DD3A53 /* UICollectionViewCell+.swift in Sources */,
 				6C9944CB2DD0F1570016BF5B /* NSAttributedString+.swift in Sources */,
 				6C231A142DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift in Sources */,
+				6C231A1A2DD3D0A400C5F0E8 /* FindClubView.swift in Sources */,
 				6CD0A8612DD39AAF0063D041 /* ClubViewController.swift in Sources */,
 				6C511E402DCCBC6E00DD3A53 /* ViewController.swift in Sources */,
 			);

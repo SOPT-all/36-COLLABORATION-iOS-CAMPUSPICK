@@ -65,10 +65,6 @@ class ClubHeaderView: UIView {
             $0.showsHorizontalScrollIndicator = false
         }
     
-    private let seperatorView = UIView().then {
-        $0.backgroundColor = .gray4
-    }
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
                 
@@ -83,7 +79,7 @@ class ClubHeaderView: UIView {
     }
     
     private func setUI() {
-        self.addSubviews(backButtonContainerView, titleLabel, myActivityLabel, searchContainerView, collectionView, seperatorView)
+        self.addSubviews(backButtonContainerView, titleLabel, myActivityLabel, searchContainerView, collectionView)
         
         backButtonContainerView.addSubviews(backButton, backButtonTitle)
         searchContainerView.addSubviews(searchIcon, searchTextField)
@@ -143,15 +139,6 @@ class ClubHeaderView: UIView {
             $0.leading.trailing.equalToSuperview().inset(15)
             $0.height.equalTo(30)
         }
-        
-        seperatorView.snp.makeConstraints {
-            $0.top.equalTo(collectionView.snp.bottom).offset(15)
-            $0.leading.trailing.equalToSuperview()
-            $0.height.equalTo(7)
-        }
-        
-        
-        
     }
     
     private func setDelegate() {
@@ -174,6 +161,9 @@ extension ClubHeaderView {
         print("뒤로 버튼 눌림")
     }
 }
+
+
+// MARK: - Delegate & DataSource
 
 extension ClubHeaderView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
