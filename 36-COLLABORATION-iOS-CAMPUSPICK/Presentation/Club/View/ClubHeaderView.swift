@@ -10,17 +10,8 @@ import UIKit
 import SnapKit
 import Then
 
-enum HeaderType {
-    case withCategory
-    case none
-}
-
-protocol ClubHeaderTypeProtocol: AnyObject {
-    func headerType(type: HeaderType)
-}
-
-// protocol 상속 받기.
 class ClubHeaderView: UIView {
+    
     private let backButtonContainerView = UIView().then {
         $0.isUserInteractionEnabled = true
     }
@@ -65,13 +56,21 @@ class ClubHeaderView: UIView {
         $0.textColor = .black
     }
     
+    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
+        .then {
+            let layout = UICollectionViewFlowLayout()
+            layout.scrollDirection = .horizontal
+            $0.collectionViewLayout = layout
+            $0.register(HeaderCategoryCollectionViewCell.self, forCellWithReuseIdentifier: HeaderCategoryCollectionViewCell.cellIdentifier)
+            $0.showsHorizontalScrollIndicator = false
+        }
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-//        self.backgroundColor = .gray3
-        
+                
         setUI()
         setLayout()
+        setDelegate()
         setActionRegister()
     }
     
@@ -80,10 +79,11 @@ class ClubHeaderView: UIView {
     }
     
     private func setUI() {
-        self.addSubviews(backButtonContainerView, titleLabel, myActivityLabel,searchContainerView)
+        self.addSubviews(backButtonContainerView, titleLabel, myActivityLabel, searchContainerView, collectionView)
         
         backButtonContainerView.addSubviews(backButton, backButtonTitle)
         searchContainerView.addSubviews(searchIcon, searchTextField)
+        
     }
     
     private func setLayout() {
@@ -133,40 +133,61 @@ class ClubHeaderView: UIView {
             $0.trailing.equalTo(searchIcon.snp.leading).offset(-10)
             $0.centerY.equalToSuperview()
         }
+        
+        collectionView.snp.makeConstraints {
+            $0.top.equalTo(searchContainerView.snp.bottom).offset(15)
+            $0.leading.trailing.equalToSuperview().inset(15)
+            $0.height.equalTo(35)
+        }
     }
     
+    private func setDelegate() {
+        collectionView.do {
+            $0.delegate = self
+            $0.dataSource = self
+        }
+    }
     
     private func setActionRegister() {
-        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(backButtonTapped))
-        backButtonContainerView.addGestureRecognizer(tapGesture)
+        backButtonContainerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(backButtonTapped)))
     }
 
-
 }
-
 
 // MARK: - Method
 
 extension ClubHeaderView {
-    
     @objc private func backButtonTapped() {
         print("뒤로 버튼 눌림")
+    }
+}
 
-        // view 계층 안에서 가장 가까운 ViewController를 찾음
-//        if let viewController = self.findViewController() {
-//            viewController.navigationController?.popViewController(animated: true)
-//        }
+extension ClubHeaderView: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        CategoryType.allCases.count
     }
     
-    
-    
-    
-//    func headerType(type: HeaderType) {
-//        switch type {
-//        case .withCategory:
-//            categoryButton.isHidden = false
-//        case .none:
-//            categoryButton.isHidden = true
-//        }
-//    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeaderCategoryCollectionViewCell.cellIdentifier, for: indexPath)
+                as? HeaderCategoryCollectionViewCell
+        else {
+            return UICollectionViewCell()
+        }
+        
+        cell.configure(title: CategoryType.allCases[indexPath.item].title())
+        return cell
+    }
+}
+
+extension ClubHeaderView: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        10
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let tmpLabel : UILabel = UILabel()
+        tmpLabel.text = CategoryType.allCases[indexPath.item].title()
+        return CGSize(width: Int(tmpLabel.intrinsicContentSize.width) + 30, height: 35)
+    }
 }
