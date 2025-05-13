@@ -11,10 +11,16 @@ import SnapKit
 import Then
 
 class PopularView: UIView {
+    
+    // MARK: - Components
+
     private let titleLabel = UILabel().then {
         $0.attributedText = .sopt("인기 모집 공고", style: .heading1)
         $0.textColor = .black
     }
+    
+    
+    // MARK: - Life Cycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -29,6 +35,9 @@ class PopularView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    // MARK: - Setting Method
+
     private func setUI() {
         self.addSubviews(titleLabel)
     }
@@ -40,5 +49,4 @@ class PopularView: UIView {
         }
     }
     
-
 }

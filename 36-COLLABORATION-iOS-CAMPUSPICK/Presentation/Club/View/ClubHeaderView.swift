@@ -12,6 +12,8 @@ import Then
 
 class ClubHeaderView: UIView {
     
+    // MARK: - Components
+    
     private let backButtonContainerView = UIView().then {
         $0.isUserInteractionEnabled = true
     }
@@ -65,6 +67,9 @@ class ClubHeaderView: UIView {
             $0.showsHorizontalScrollIndicator = false
         }
     
+    
+    // MARK: - Life Cycle
+
     override init(frame: CGRect) {
         super.init(frame: frame)
                 
@@ -77,6 +82,9 @@ class ClubHeaderView: UIView {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
+    // MARK: - Setting Method
     
     private func setUI() {
         self.addSubviews(backButtonContainerView, titleLabel, myActivityLabel, searchContainerView, collectionView)

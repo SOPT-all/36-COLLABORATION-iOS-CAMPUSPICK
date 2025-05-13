@@ -11,12 +11,18 @@ import SnapKit
 import Then
 
 class HeaderCategoryCollectionViewCell: UICollectionViewCell {
+    
+    // MARK: - Components
+
     private let containerView = UIView().then {
         $0.layer.cornerRadius = 13
     }
     
     private let titleLabel = UILabel()
     
+    
+    // MARK: - Life Cycle
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -29,6 +35,9 @@ class HeaderCategoryCollectionViewCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    // MARK: - Setting Method
+
     private func setUI() {
         self.addSubviews(containerView)
         containerView.addSubview(titleLabel)
@@ -44,6 +53,9 @@ class HeaderCategoryCollectionViewCell: UICollectionViewCell {
         }
     }
     
+    
+    // MARK: - Method
+
     func configure(title: String) {
         let tmpLabel : UILabel = UILabel()
         tmpLabel.text = title
@@ -70,4 +82,5 @@ class HeaderCategoryCollectionViewCell: UICollectionViewCell {
             }
         }
     }
+    
 }

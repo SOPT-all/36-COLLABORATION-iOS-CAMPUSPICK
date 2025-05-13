@@ -11,8 +11,14 @@ import SnapKit
 import Then
 
 class FindClubView: UIView {
+    
+    // MARK: - Property
+
     private var filterbuttonToggle: Bool = false
     
+    
+    // MARK: - Components
+
     private let titleLabel = UILabel().then {
         $0.attributedText = .sopt("동아리 탐색", style: .heading1)
         $0.textColor = .black
@@ -55,6 +61,9 @@ class FindClubView: UIView {
         $0.imageView?.contentMode = .scaleAspectFit
     }
     
+    
+    // MARK: - Life Cycle
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -69,6 +78,9 @@ class FindClubView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    // MARK: - Setting Method
+
     private func setUI() {
         self.addSubviews(titleLabel, filterLabel, filterButton, seperator, localLabel, localButton, bottomSheetLabel, bottomSheetButton)
     }

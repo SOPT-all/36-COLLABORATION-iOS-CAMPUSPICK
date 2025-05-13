@@ -11,6 +11,9 @@ import SnapKit
 import Then
 
 class RankingView: UIView {
+    
+    // MARK: - Components
+
     private let titleLabel = UILabel().then {
         $0.attributedText = .sopt("동아리 랭킹", style: .heading1)
         $0.textColor = .black
@@ -22,6 +25,9 @@ class RankingView: UIView {
         $0.setTitleColor(.gray2, for: .normal)
     }
     
+    
+    // MARK: - Life Cycle
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -35,6 +41,9 @@ class RankingView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    // MARK: - Setting Method
+
     private func setUI() {
         self.addSubviews(titleLabel, moreButton)
     }
@@ -51,5 +60,4 @@ class RankingView: UIView {
         }
     }
     
-
 }

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		6C231A0A2DD39BC600C5F0E8 /* ClubHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A092DD39BC600C5F0E8 /* ClubHeaderView.swift */; };
-		6C231A0E2DD3B75B00C5F0E8 /* HeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A0D2DD3B75B00C5F0E8 /* HeaderType.swift */; };
 		6C231A102DD3B77B00C5F0E8 /* CategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A0F2DD3B77B00C5F0E8 /* CategoryType.swift */; };
 		6C231A142DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A132DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift */; };
 		6C231A162DD3CAB900C5F0E8 /* PopularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A152DD3CAB900C5F0E8 /* PopularView.swift */; };
@@ -36,7 +35,6 @@
 
 /* Begin PBXFileReference section */
 		6C231A092DD39BC600C5F0E8 /* ClubHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubHeaderView.swift; sourceTree = "<group>"; };
-		6C231A0D2DD3B75B00C5F0E8 /* HeaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderType.swift; sourceTree = "<group>"; };
 		6C231A0F2DD3B77B00C5F0E8 /* CategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryType.swift; sourceTree = "<group>"; };
 		6C231A132DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
 		6C231A152DD3CAB900C5F0E8 /* PopularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularView.swift; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 		6C231A0C2DD3B74C00C5F0E8 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
-				6C231A0D2DD3B75B00C5F0E8 /* HeaderType.swift */,
 				6C231A0F2DD3B77B00C5F0E8 /* CategoryType.swift */,
 			);
 			path = Enum;
@@ -387,7 +384,6 @@
 				6C511F252DCCE59500DD3A53 /* UIStackView+.swift in Sources */,
 				6C511E472DCCE36100DD3A53 /* AppDelegate.swift in Sources */,
 				6C231A102DD3B77B00C5F0E8 /* CategoryType.swift in Sources */,
-				6C231A0E2DD3B75B00C5F0E8 /* HeaderType.swift in Sources */,
 				6C511F292DCCE5D900DD3A53 /* UIView+.swift in Sources */,
 				6C511E3F2DCCBC6E00DD3A53 /* SceneDelegate.swift in Sources */,
 				6C231A0A2DD39BC600C5F0E8 /* ClubHeaderView.swift in Sources */,
