@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C231A0A2DD39BC600C5F0E8 /* ClubHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A092DD39BC600C5F0E8 /* ClubHeaderView.swift */; };
+		6C231A102DD3B77B00C5F0E8 /* CategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A0F2DD3B77B00C5F0E8 /* CategoryType.swift */; };
+		6C231A142DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A132DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift */; };
+		6C231A162DD3CAB900C5F0E8 /* PopularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A152DD3CAB900C5F0E8 /* PopularView.swift */; };
+		6C231A182DD3CDA200C5F0E8 /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A172DD3CDA200C5F0E8 /* RankingView.swift */; };
+		6C231A1A2DD3D0A400C5F0E8 /* FindClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A192DD3D0A400C5F0E8 /* FindClubView.swift */; };
 		6C511E3F2DCCBC6E00DD3A53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511E3B2DCCBC6E00DD3A53 /* SceneDelegate.swift */; };
 		6C511E402DCCBC6E00DD3A53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511E3C2DCCBC6E00DD3A53 /* ViewController.swift */; };
 		6C511E412DCCBC6E00DD3A53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C511E372DCCBC6E00DD3A53 /* Assets.xcassets */; };
@@ -24,9 +30,16 @@
 		6C9944CB2DD0F1570016BF5B /* NSAttributedString+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9944CA2DD0F1570016BF5B /* NSAttributedString+.swift */; };
 		6C9944CE2DD0F2A00016BF5B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6C9944CD2DD0F2A00016BF5B /* SnapKit */; };
 		6C9944D12DD0F2AA0016BF5B /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 6C9944D02DD0F2AA0016BF5B /* Then */; };
+		6CD0A8612DD39AAF0063D041 /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD0A8602DD39AAF0063D041 /* ClubViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6C231A092DD39BC600C5F0E8 /* ClubHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubHeaderView.swift; sourceTree = "<group>"; };
+		6C231A0F2DD3B77B00C5F0E8 /* CategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryType.swift; sourceTree = "<group>"; };
+		6C231A132DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		6C231A152DD3CAB900C5F0E8 /* PopularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularView.swift; sourceTree = "<group>"; };
+		6C231A172DD3CDA200C5F0E8 /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
+		6C231A192DD3D0A400C5F0E8 /* FindClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindClubView.swift; sourceTree = "<group>"; };
 		6C511E0E2DCCBBB100DD3A53 /* 36-COLLABORATION-iOS-CAMPUSPICK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "36-COLLABORATION-iOS-CAMPUSPICK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C511E372DCCBC6E00DD3A53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C511E382DCCBC6E00DD3A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -44,6 +57,7 @@
 		6C9944042DD0EBFE0016BF5B /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		6C9944092DD0ED830016BF5B /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		6C9944CA2DD0F1570016BF5B /* NSAttributedString+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+.swift"; sourceTree = "<group>"; };
+		6CD0A8602DD39AAF0063D041 /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +73,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C231A0C2DD3B74C00C5F0E8 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				6C231A0F2DD3B77B00C5F0E8 /* CategoryType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		6C231A122DD3B9DA00C5F0E8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6C231A132DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
 		6C511E052DCCBBB100DD3A53 = {
 			isa = PBXGroup;
 			children = (
@@ -199,6 +229,7 @@
 		6C9946622DD0FBED0016BF5B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6C231A0C2DD3B74C00C5F0E8 /* Enum */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -206,6 +237,11 @@
 		6C9946632DD0FBED0016BF5B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6C231A122DD3B9DA00C5F0E8 /* Cell */,
+				6C231A092DD39BC600C5F0E8 /* ClubHeaderView.swift */,
+				6C231A152DD3CAB900C5F0E8 /* PopularView.swift */,
+				6C231A172DD3CDA200C5F0E8 /* RankingView.swift */,
+				6C231A192DD3D0A400C5F0E8 /* FindClubView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +249,7 @@
 		6C9946642DD0FBED0016BF5B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6CD0A8602DD39AAF0063D041 /* ClubViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -342,13 +379,20 @@
 			buildActionMask = 2147483647;
 			files = (
 				6C99440A2DD0ED830016BF5B /* UIFont+.swift in Sources */,
+				6C231A182DD3CDA200C5F0E8 /* RankingView.swift in Sources */,
+				6C231A162DD3CAB900C5F0E8 /* PopularView.swift in Sources */,
 				6C511F252DCCE59500DD3A53 /* UIStackView+.swift in Sources */,
 				6C511E472DCCE36100DD3A53 /* AppDelegate.swift in Sources */,
+				6C231A102DD3B77B00C5F0E8 /* CategoryType.swift in Sources */,
 				6C511F292DCCE5D900DD3A53 /* UIView+.swift in Sources */,
 				6C511E3F2DCCBC6E00DD3A53 /* SceneDelegate.swift in Sources */,
+				6C231A0A2DD39BC600C5F0E8 /* ClubHeaderView.swift in Sources */,
 				6C511F272DCCE5C500DD3A53 /* UITableViewCell+.swift in Sources */,
 				6C511F232DCCE56500DD3A53 /* UICollectionViewCell+.swift in Sources */,
 				6C9944CB2DD0F1570016BF5B /* NSAttributedString+.swift in Sources */,
+				6C231A142DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift in Sources */,
+				6C231A1A2DD3D0A400C5F0E8 /* FindClubView.swift in Sources */,
+				6CD0A8612DD39AAF0063D041 /* ClubViewController.swift in Sources */,
 				6C511E402DCCBC6E00DD3A53 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
