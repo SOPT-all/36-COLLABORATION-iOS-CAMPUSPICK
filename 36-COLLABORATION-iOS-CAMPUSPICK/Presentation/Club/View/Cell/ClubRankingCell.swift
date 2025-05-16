@@ -11,25 +11,26 @@ import SnapKit
 import Then
 
 class ClubRankingCell: UICollectionViewCell {
+    
+    // MARK: - Components
+
     private let rankLabel = UILabel().then {
         $0.textColor = .mainBlue
     }
     
-    private let clubNameLabel = UILabel().then {
-        $0.attributedText = .sopt("", style: .body0)
-        $0.textColor = .black
-    }
+    private let clubNameLabel = UILabel()
     
-    private let clubIntroduceLabel = UILabel().then {
-        $0.attributedText = .sopt("", style: .caption5)
-        $0.textColor = .gray2
-    }
+    private let clubIntroduceLabel = UILabel()
     
     private let clubImageView = UIImageView().then {
         $0.clipsToBounds = true
         $0.contentMode = .scaleAspectFill
+        $0.layer.cornerRadius = 27
     }
     
+    
+    // MARK: - Life Cycle
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -42,6 +43,9 @@ class ClubRankingCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    // MARK: - Setting Method
+
     private func setUI() {
         self.addSubviews(rankLabel, clubNameLabel, clubIntroduceLabel, clubImageView)
     }
@@ -59,7 +63,7 @@ class ClubRankingCell: UICollectionViewCell {
         
         clubIntroduceLabel.snp.makeConstraints {
             $0.leading.equalTo(rankLabel.snp.trailing).offset(20)
-            $0.bottom.equalToSuperview().inset(10)
+            $0.top.equalTo(clubNameLabel.snp.bottom).offset(6)
         }
         
         clubImageView.snp.makeConstraints {
@@ -73,9 +77,14 @@ class ClubRankingCell: UICollectionViewCell {
     // MARK: - Method
 
     func configure(item: ClubRankingModel) {
-        self.rankLabel.text = item.id.description
-        self.clubNameLabel.text = item.clubName
-        self.clubIntroduceLabel.text = item.clubIntroduce
+        self.rankLabel.attributedText = .sopt(item.id.description, style: .heading2)
+        
+        self.clubNameLabel.attributedText = .sopt(item.clubName, style: .body0)
+        self.clubNameLabel.textColor = .black
+        
+        self.clubIntroduceLabel.attributedText = .sopt(item.clubIntroduce, style: .caption5)
+        self.clubIntroduceLabel.textColor = .gray2
+        
         self.clubImageView.image = UIImage(named: item.clubImage)
     }
     
