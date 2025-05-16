@@ -11,6 +11,7 @@ import SnapKit
 import Then
 
 class ClubHeaderView: UIView {
+    private var headerTypeValue: HeaderType?
     
     // MARK: - Components
     
@@ -58,6 +59,10 @@ class ClubHeaderView: UIView {
         $0.textColor = .black
     }
     
+    private lazy var filterButton = UIButton().then {
+        $0.setImage(.filterIcon, for: .normal)
+    }
+    
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
         .then {
             let layout = UICollectionViewFlowLayout()
@@ -70,13 +75,15 @@ class ClubHeaderView: UIView {
     
     // MARK: - Life Cycle
 
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-                
+    init(type: HeaderType) {
+        self.headerTypeValue = type
+        super.init(frame: .zero)
+        
         setUI()
         setLayout()
         setDelegate()
         setAddTarget()
+        headerType(type: type)
     }
     
     required init?(coder: NSCoder) {
@@ -87,11 +94,10 @@ class ClubHeaderView: UIView {
     // MARK: - Setting Method
     
     private func setUI() {
-        self.addSubviews(backButtonContainerView, titleLabel, myActivityLabel, searchContainerView, collectionView)
+        self.addSubviews(backButtonContainerView, titleLabel, myActivityLabel, searchContainerView, filterButton, collectionView)
         
         backButtonContainerView.addSubviews(backButton, backButtonTitle)
         searchContainerView.addSubviews(searchIcon, searchTextField)
-        
     }
     
     private func setLayout() {
@@ -126,7 +132,16 @@ class ClubHeaderView: UIView {
 
         searchContainerView.snp.makeConstraints {
             $0.top.equalTo(backButtonContainerView.snp.bottom).offset(25)
-            $0.leading.trailing.equalToSuperview().inset(15)
+            $0.leading.equalToSuperview().inset(15)
+            
+            if headerTypeValue == .withOutCategory {
+                $0.trailing.equalToSuperview().inset(63)
+            } else if headerTypeValue == .basic {
+                $0.trailing.equalToSuperview().inset(63)
+            } else {
+                $0.trailing.equalToSuperview().inset(15)
+            }
+            
             $0.height.equalTo(38)
         }
 
@@ -140,6 +155,13 @@ class ClubHeaderView: UIView {
             $0.leading.equalToSuperview().inset(12)
             $0.trailing.equalTo(searchIcon.snp.leading).offset(-10)
             $0.centerY.equalToSuperview()
+        }
+        
+        filterButton.snp.makeConstraints {
+            $0.leading.equalTo(searchContainerView.snp.trailing).offset(10)
+            $0.trailing.equalToSuperview().inset(15)
+            $0.size.equalTo(38)
+            $0.centerY.equalTo(searchContainerView)
         }
         
         collectionView.snp.makeConstraints {
@@ -168,8 +190,27 @@ extension ClubHeaderView {
     @objc private func backButtonTapped() {
         print("뒤로 버튼 눌림")
     }
+    
+    func headerType(type: HeaderType) {
+        self.headerTypeValue = type
+        switch type {
+        case .withOutCategory:
+            collectionView.isHidden = true
+            collectionView.snp.removeConstraints()
+        case .withOutFilter:
+            filterButton.isHidden = true
+            filterButton.snp.removeConstraints()
+            searchTextField.isEnabled = false
+            searchContainerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(searchBarTapped)))
+        case .basic: break
+        }
+    }
+    
+    @objc private func searchBarTapped() {
+        // 네비게이션 이동
+        print("검색창 네비게이션 클릭")
+    }
 }
-
 
 // MARK: - Delegate & DataSource
 
