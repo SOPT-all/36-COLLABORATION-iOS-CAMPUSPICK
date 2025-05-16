@@ -180,6 +180,7 @@
 		6C511E532DCCE46600DD3A53 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				6C231A092DD39BC600C5F0E8 /* ClubHeaderView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -238,7 +239,6 @@
 			isa = PBXGroup;
 			children = (
 				6C231A122DD3B9DA00C5F0E8 /* Cell */,
-				6C231A092DD39BC600C5F0E8 /* ClubHeaderView.swift */,
 				6C231A152DD3CAB900C5F0E8 /* PopularView.swift */,
 				6C231A172DD3CDA200C5F0E8 /* RankingView.swift */,
 				6C231A192DD3D0A400C5F0E8 /* FindClubView.swift */,
