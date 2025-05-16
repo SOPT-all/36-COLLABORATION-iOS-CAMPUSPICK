@@ -58,6 +58,10 @@ class ClubHeaderView: UIView {
         $0.textColor = .black
     }
     
+    private lazy var filterButton = UIButton().then {
+        $0.
+    }
+    
     private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
         .then {
             let layout = UICollectionViewFlowLayout()
