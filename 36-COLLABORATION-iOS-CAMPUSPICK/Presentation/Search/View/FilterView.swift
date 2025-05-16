@@ -9,7 +9,7 @@ import UIKit
 import SnapKit
 import Then
 
-final class FilterView<T: FilterOptionType & RawRepresentable & CaseIterable>: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout where T.RawValue == String {
+final class FilterView<T: FilterOptionType & CaseIterable>: UIView, UICollectionViewDataSource, UICollectionViewDelegate{
 
     private let keywords: [T] = T.allCases as! [T]
     private var titleText: String
