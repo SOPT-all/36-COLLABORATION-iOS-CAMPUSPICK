@@ -136,6 +136,8 @@ class ClubHeaderView: UIView {
             
             if headerTypeValue == .withOutCategory {
                 $0.trailing.equalToSuperview().inset(63)
+            } else if headerTypeValue == .basic {
+                $0.trailing.equalToSuperview().inset(63)
             } else {
                 $0.trailing.equalToSuperview().inset(15)
             }
@@ -200,6 +202,7 @@ extension ClubHeaderView {
             filterButton.snp.removeConstraints()
             searchTextField.isEnabled = false
             searchContainerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(searchBarTapped)))
+        case .basic: break
         }
     }
     
@@ -208,12 +211,6 @@ extension ClubHeaderView {
         print("검색창 네비게이션 클릭")
     }
 }
-
-enum HeaderType {
-    case withOutCategory
-    case withOutFilter
-}
-
 
 // MARK: - Delegate & DataSource
 
