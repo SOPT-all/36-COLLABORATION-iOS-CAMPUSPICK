@@ -14,9 +14,9 @@ final class SearchFilterModalViewController: UIViewController {
     
     // MARK: - Property
     
-    let deadlineView = FilterView<DeadlineType>(title: "마감 기한", storageKey: "SelectedDeadline")
-    let regionView = FilterView<RegionType>(title: "지역", storageKey: "SelectedRegion")
-    let dayView = FilterView<DayType>(title: "활동 선호 요일", storageKey: "SelectedDay")
+    let deadlineView = FilterView<DeadlineType>(title: "마감 기한")
+    let regionView = FilterView<RegionType>(title: "지역")
+    let dayView = FilterView<DayType>(title: "활동 선호 요일")
 
     
     // MARK: - Init

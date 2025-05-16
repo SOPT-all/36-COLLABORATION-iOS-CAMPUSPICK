@@ -38,7 +38,7 @@ final class FilterView<T: FilterOptionType & CaseIterable>: UIView, UICollection
 
     // MARK: - Init
     
-    init(title: String, storageKey: String) {
+    init(title: String) {
         self.titleText = title
         super.init(frame: .zero)
         
