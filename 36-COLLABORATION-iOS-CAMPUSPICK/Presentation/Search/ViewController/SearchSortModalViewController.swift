@@ -46,7 +46,6 @@ final class SearchSortModalViewController: UIViewController {
     
     private func setStyle() {
         view.backgroundColor = .white
-        view.layer.cornerRadius = 16
         view.addSubviews(tableView)
     }
     
