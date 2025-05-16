@@ -12,21 +12,13 @@ import Then
 final class FilterView<T: FilterOptionType & RawRepresentable & CaseIterable>: UIView, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout where T.RawValue == String {
 
     private let keywords: [T] = T.allCases as! [T]
-
-    private var selectedOption: T? {
-        didSet {
-            if let selected = selectedOption {
-                UserDefaults.standard.set(selected.rawValue, forKey: "storageKey")
-            }
-        }
-    }
-    private var storageKey: String
     private var titleText: String
+    private var selectedOption: T?
+    var onSelectionChanged: ((T) -> Void)?
     
     // MARK: - Property
     
     private let titleLabel = UILabel().then {
-        $0.text = "마감 기한"
         $0.font = .soptFont(.heading3)
     }
     
@@ -48,12 +40,8 @@ final class FilterView<T: FilterOptionType & RawRepresentable & CaseIterable>: U
     
     init(title: String, storageKey: String) {
         self.titleText = title
-        self.storageKey = storageKey
         super.init(frame: .zero)
-        if let rawValue = UserDefaults.standard.string(forKey: storageKey),
-           let savedOption = T(rawValue: rawValue) {
-            selectedOption = savedOption
-        }
+        
         setStyle()
         setLayout()
     }
@@ -66,6 +54,7 @@ final class FilterView<T: FilterOptionType & RawRepresentable & CaseIterable>: U
     // MARK: - Set UI
     
     private func setStyle() {
+        titleLabel.text = titleText
         addSubviews(titleLabel, collectionView)
     }
     
@@ -88,14 +77,10 @@ final class FilterView<T: FilterOptionType & RawRepresentable & CaseIterable>: U
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterCollectionViewCell.cellIdentifier, for: indexPath) as? FilterCollectionViewCell else { return UICollectionViewCell() }
-        cell.dataBind(data: keywords[indexPath.item])
-        
-        if let selected = selectedOption,
-           keywords[indexPath.item] == selected {
-            collectionView.selectItem(at: indexPath, animated: false, scrollPosition: [])
-            cell.isSelected = true
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FilterCollectionViewCell.cellIdentifier, for: indexPath) as? FilterCollectionViewCell else { return UICollectionViewCell()
         }
+        let option = keywords[indexPath.item]
+        cell.dataBind(data: option)
         return cell
     }
 }
