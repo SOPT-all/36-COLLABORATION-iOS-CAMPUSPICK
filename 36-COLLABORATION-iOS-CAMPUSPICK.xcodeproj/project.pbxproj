@@ -24,6 +24,13 @@
 		6C9944CB2DD0F1570016BF5B /* NSAttributedString+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C9944CA2DD0F1570016BF5B /* NSAttributedString+.swift */; };
 		6C9944CE2DD0F2A00016BF5B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6C9944CD2DD0F2A00016BF5B /* SnapKit */; };
 		6C9944D12DD0F2AA0016BF5B /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 6C9944D02DD0F2AA0016BF5B /* Then */; };
+		F6659CAE2DD65B280018B574 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6659CAD2DD65B1F0018B574 /* HomeViewController.swift */; };
+		F6659CB02DD665310018B574 /* MainHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6659CAF2DD665280018B574 /* MainHeaderView.swift */; };
+		F6659CB22DD70EAA0018B574 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6659CB12DD70E950018B574 /* TabBarController.swift */; };
+		F6659CB42DD710580018B574 /* StudyViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6659CB32DD710520018B574 /* StudyViewController.swift */; };
+		F6659CB62DD710690018B574 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6659CB52DD7105C0018B574 /* CommunityViewController.swift */; };
+		F6659CB82DD710720018B574 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6659CB72DD7106C0018B574 /* ChatViewController.swift */; };
+		F6659CBA2DD7107F0018B574 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6659CB92DD710770018B574 /* MyPageViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +51,13 @@
 		6C9944042DD0EBFE0016BF5B /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		6C9944092DD0ED830016BF5B /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		6C9944CA2DD0F1570016BF5B /* NSAttributedString+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+.swift"; sourceTree = "<group>"; };
+		F6659CAD2DD65B1F0018B574 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		F6659CAF2DD665280018B574 /* MainHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainHeaderView.swift; sourceTree = "<group>"; };
+		F6659CB12DD70E950018B574 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		F6659CB32DD710520018B574 /* StudyViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudyViewController.swift; sourceTree = "<group>"; };
+		F6659CB52DD7105C0018B574 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
+		F6659CB72DD7106C0018B574 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
+		F6659CB92DD710770018B574 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -237,6 +251,7 @@
 		6C9946672DD0FBEF0016BF5B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F6659CAF2DD665280018B574 /* MainHeaderView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -244,6 +259,12 @@
 		6C9946682DD0FBEF0016BF5B /* VIewController */ = {
 			isa = PBXGroup;
 			children = (
+				F6659CB92DD710770018B574 /* MyPageViewController.swift */,
+				F6659CB72DD7106C0018B574 /* ChatViewController.swift */,
+				F6659CB52DD7105C0018B574 /* CommunityViewController.swift */,
+				F6659CB32DD710520018B574 /* StudyViewController.swift */,
+				F6659CB12DD70E950018B574 /* TabBarController.swift */,
+				F6659CAD2DD65B1F0018B574 /* HomeViewController.swift */,
 			);
 			path = VIewController;
 			sourceTree = "<group>";
@@ -346,9 +367,16 @@
 				6C511E472DCCE36100DD3A53 /* AppDelegate.swift in Sources */,
 				6C511F292DCCE5D900DD3A53 /* UIView+.swift in Sources */,
 				6C511E3F2DCCBC6E00DD3A53 /* SceneDelegate.swift in Sources */,
+				F6659CB42DD710580018B574 /* StudyViewController.swift in Sources */,
+				F6659CB62DD710690018B574 /* CommunityViewController.swift in Sources */,
+				F6659CBA2DD7107F0018B574 /* MyPageViewController.swift in Sources */,
+				F6659CAE2DD65B280018B574 /* HomeViewController.swift in Sources */,
+				F6659CB02DD665310018B574 /* MainHeaderView.swift in Sources */,
 				6C511F272DCCE5C500DD3A53 /* UITableViewCell+.swift in Sources */,
 				6C511F232DCCE56500DD3A53 /* UICollectionViewCell+.swift in Sources */,
+				F6659CB22DD70EAA0018B574 /* TabBarController.swift in Sources */,
 				6C9944CB2DD0F1570016BF5B /* NSAttributedString+.swift in Sources */,
+				F6659CB82DD710720018B574 /* ChatViewController.swift in Sources */,
 				6C511E402DCCBC6E00DD3A53 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
