@@ -17,7 +17,10 @@ final class MainHeaderView: UIView {
     }
     
     private let alarmButton = UIButton().then {
-        $0.setImage(.bell, for: .normal)
+        $0.translatesAutoresizingMaskIntoConstraints = false
+        let image = UIImage(named: "bell")?.resizeImageTo(size: CGSize(width: 24, height: 24))
+        $0.setImage(image, for: .normal)
+        
     }
     
     override init(frame: CGRect) {
@@ -49,5 +52,16 @@ final class MainHeaderView: UIView {
             $0.centerY.equalToSuperview()
             $0.trailing.equalToSuperview().inset(15)
         }
+    }
+}
+
+
+extension UIImage {
+    func resizeImageTo(size: CGSize) -> UIImage? {
+        UIGraphicsBeginImageContextWithOptions(size, false, 0.0)
+        self.draw(in: CGRect(origin: CGPoint.zero, size: size))
+        guard let resizedImage = UIGraphicsGetImageFromCurrentImageContext() else { return nil }
+        UIGraphicsEndImageContext()
+        return resizedImage
     }
 }
