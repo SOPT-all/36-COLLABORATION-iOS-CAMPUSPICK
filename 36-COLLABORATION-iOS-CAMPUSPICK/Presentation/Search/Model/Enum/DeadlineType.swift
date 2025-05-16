@@ -5,7 +5,7 @@
 //  Created by 김나연 on 5/16/25.
 //
 
-enum DeadlineType: CaseIterable {
+enum DeadlineType: String, CaseIterable, FilterOptionType {
     case all
     case under7
     case over7

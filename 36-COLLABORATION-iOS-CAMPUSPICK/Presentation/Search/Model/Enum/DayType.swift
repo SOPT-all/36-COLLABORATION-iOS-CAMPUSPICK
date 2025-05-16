@@ -5,7 +5,7 @@
 //  Created by 김나연 on 5/16/25.
 //
 
-enum DayType: CaseIterable {
+enum DayType: String, CaseIterable, FilterOptionType {
     case all
     case monday
     case tuesday

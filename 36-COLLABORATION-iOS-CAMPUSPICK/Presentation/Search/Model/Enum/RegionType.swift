@@ -5,7 +5,7 @@
 //  Created by 김나연 on 5/16/25.
 //
 
-enum RegionType: CaseIterable {
+enum RegionType: String, CaseIterable, FilterOptionType {
     case all
     case capitalRegion
     case chungcheongDaejeon
