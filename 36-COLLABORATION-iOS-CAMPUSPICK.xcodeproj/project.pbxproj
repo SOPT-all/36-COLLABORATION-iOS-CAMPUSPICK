@@ -246,7 +246,7 @@
 		6C511E532DCCE46600DD3A53 /* Components */ = {
 			isa = PBXGroup;
 			children = (
-				33B010F22DD6FA290081CB8E /* LeftAlignedCollectionViewFlowLayout.swift */,\
+				33B010F22DD6FA290081CB8E /* LeftAlignedCollectionViewFlowLayout.swift */,
 				6C3688072DD7086000DE281C /* Enum */,
 				6C231A092DD39BC600C5F0E8 /* ClubHeaderView.swift */,
 			);
