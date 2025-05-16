@@ -20,6 +20,7 @@ enum SoptFontStyle {
     case heading0
     case heading1
     case heading2
+    case heading3
     
     // body
     case body0
@@ -45,6 +46,8 @@ extension UIFont {
             return UIFont(name: FontWeight.semiBold.rawValue, size: 17)!
         case .heading2:
             return UIFont(name: FontWeight.regular.rawValue, size: 17)!
+        case .heading3:
+            return UIFont(name: FontWeight.bold.rawValue, size: 13)!
         case .body0:
             return UIFont(name: FontWeight.medium.rawValue, size: 14)!
         case .body1:
