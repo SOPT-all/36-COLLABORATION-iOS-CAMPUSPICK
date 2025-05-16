@@ -33,5 +33,7 @@ final class TabBarController: UITabBarController {
         myPageVC.tabBarItem = UITabBarItem(title: "마이", image: .mypageDeact, selectedImage: .mypageAct)
         
         viewControllers = [homeVC, studyVC, communityVC, chatVC, myPageVC]
+        
+        self.tabBar.tintColor = .mainBlue
     }
 }
