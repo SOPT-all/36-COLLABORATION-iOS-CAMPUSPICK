@@ -7,6 +7,9 @@
 
 import UIKit
 
+import SnapKit
+import Then
+
 final class ClubViewController: UIViewController {
     
     // MARK: - Property
@@ -15,7 +18,7 @@ final class ClubViewController: UIViewController {
         $0.showsVerticalScrollIndicator = false
     }
     private let contentView = UIView()
-    private var headerView = ClubHeaderView()
+    private var headerView = ClubHeaderView(type: HeaderType.withOutFilter)
     private let seperatorView1 = UIView().then {
         $0.backgroundColor = .gray4
     }
