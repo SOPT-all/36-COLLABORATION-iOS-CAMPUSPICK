@@ -22,8 +22,10 @@ final class PopularSearchView: UIView {
     }
     
     private lazy var collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout()).then {
-        let layout = UICollectionViewFlowLayout()
+        let layout = LeftAlignedCollectionViewFlowLayout()
         layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = 10
+        layout.minimumInteritemSpacing = 10
         layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         $0.collectionViewLayout = layout
         $0.dataSource = self
@@ -78,15 +80,3 @@ extension PopularSearchView: UICollectionViewDataSource, UICollectionViewDelegat
         return cell
     }
 }
-
-extension PopularSearchView: UICollectionViewDelegateFlowLayout {
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        10
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        10
-    }
-}
-
