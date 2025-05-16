@@ -11,5 +11,20 @@ import Then
 
 final class CommunityViewController: UIViewController {
     
+    private let communityView = UIView().then{
+        $0.backgroundColor = .systemBlue
+    }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setLayout()
+    }
+    
+    private func setLayout() {
+        view.addSubview(communityView)
+        
+        communityView.snp.makeConstraints {
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+    }
 }

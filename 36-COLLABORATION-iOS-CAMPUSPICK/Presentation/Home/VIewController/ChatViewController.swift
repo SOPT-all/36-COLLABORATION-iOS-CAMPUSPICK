@@ -11,5 +11,20 @@ import Then
 
 final class ChatViewController: UIViewController {
     
+    private let chatView = UIView().then{
+        $0.backgroundColor = .systemOrange
+    }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setLayout()
+    }
+    
+    private func setLayout() {
+        view.addSubview(chatView)
+        
+        chatView.snp.makeConstraints {
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+    }
 }

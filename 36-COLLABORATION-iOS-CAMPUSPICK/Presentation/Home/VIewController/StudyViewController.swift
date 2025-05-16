@@ -11,5 +11,20 @@ import Then
 
 final class StudyViewController: UIViewController {
     
+    private let studyView = UIView().then{
+        $0.backgroundColor = .systemPink
+    }
     
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setLayout()
+    }
+    
+    private func setLayout() {
+        view.addSubview(studyView)
+        
+        studyView.snp.makeConstraints {
+            $0.edges.equalTo(view.safeAreaLayoutGuide)
+        }
+    }
 }
