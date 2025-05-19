@@ -65,7 +65,7 @@ final class BannerView: UIView {
         pageControl.currentPage = 0
         
         setUI()
-        setupLayout()
+        setLayout()
         
         scrollView.delegate = self
         pageControl.addTarget(self, action: #selector(pageControlChanged(_:)), for: .valueChanged)
@@ -82,7 +82,7 @@ final class BannerView: UIView {
         scrollView.addSubviews(imageView1, imageView2, imageView3, imageView4)
     }
     
-    private func setupLayout() {
+    private func setLayout() {
         scrollView.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
             $0.bottom.equalToSuperview().inset(40)

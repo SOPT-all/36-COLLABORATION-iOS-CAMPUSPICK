@@ -20,8 +20,10 @@ final class MainHeaderView: UIView {
         $0.translatesAutoresizingMaskIntoConstraints = false
         let image = UIImage(named: "bell")?.resizeImageTo(size: CGSize(width: 24, height: 24))
         $0.setImage(image, for: .normal)
-        
     }
+    
+    
+    // MARK: - Init
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -34,7 +36,7 @@ final class MainHeaderView: UIView {
     }
     
     
-    // Mark :- Setting Method
+    // MARK: - Setting Method
     
     private func setUI() {
         self.addSubviews(
@@ -55,6 +57,8 @@ final class MainHeaderView: UIView {
     }
 }
 
+
+// MARK: - Image Resize Method
 
 extension UIImage {
     func resizeImageTo(size: CGSize) -> UIImage? {

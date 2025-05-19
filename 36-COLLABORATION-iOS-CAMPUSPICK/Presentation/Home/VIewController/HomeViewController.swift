@@ -11,10 +11,27 @@ import Then
 
 final class HomeViewController: UIViewController {
     
+    
+    // MARK: - Properties
+    
     private let headerView = MainHeaderView()
     private let bannerView = BannerView()
+    private let mainIconView = MainIconView()
+    private let popularClubView = PopularClubView().then {
+        $0.backgroundColor = .gray2
+    }
+    private let popularActivityView = PopularActivityView().then {
+        $0.backgroundColor = .systemGreen
+    }
+    private let popularContestView = PopularContestView().then {
+        $0.backgroundColor = .systemPink
+    }
+    private let eventView = EventView()
     
     private let scrollView = UIScrollView()
+    
+    
+    // MARK: - Life Cycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -23,13 +40,21 @@ final class HomeViewController: UIViewController {
         setLayout()
     }
     
+    
+    // MARK: - Setting Method
+    
     private func setUI() {
         view.addSubviews(
             headerView,
             scrollView
         )
         scrollView.addSubviews(
-            bannerView
+            bannerView,
+            mainIconView,
+            popularClubView,
+            popularActivityView,
+            popularContestView,
+            eventView
         )
     }
     
@@ -49,6 +74,37 @@ final class HomeViewController: UIViewController {
             $0.leading.equalToSuperview()
             $0.height.equalTo(160)
             $0.width.equalTo(scrollView.snp.width)
+        }
+        mainIconView.snp.makeConstraints {
+            $0.top.equalTo(bannerView.snp.bottom)
+            $0.horizontalEdges.equalToSuperview()
+            $0.height.equalTo(80)
+            $0.width.equalToSuperview()
+        }
+        popularClubView.snp.makeConstraints {
+            $0.top.equalTo(mainIconView.snp.bottom).offset(4)
+            $0.horizontalEdges.equalToSuperview()
+            $0.height.equalTo(210)
+            $0.width.equalToSuperview()
+        }
+        popularActivityView.snp.makeConstraints {
+            $0.top.equalTo(popularClubView.snp.bottom)
+            $0.horizontalEdges.equalToSuperview()
+            $0.height.equalTo(210)
+            $0.width.equalToSuperview()
+        }
+        popularContestView.snp.makeConstraints {
+            $0.top.equalTo(popularActivityView.snp.bottom)
+            $0.horizontalEdges.equalToSuperview()
+            $0.height.equalTo(210)
+            $0.width.equalToSuperview()
+        }
+        eventView.snp.makeConstraints {
+            $0.top.equalTo(popularContestView.snp.bottom)
+            $0.horizontalEdges.equalToSuperview()
+            $0.height.equalTo(350)
+            $0.width.equalToSuperview()
+            $0.bottom.equalToSuperview()
         }
     }
     

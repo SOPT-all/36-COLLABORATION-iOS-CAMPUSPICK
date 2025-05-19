@@ -32,6 +32,11 @@
 		F6659CB82DD710720018B574 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6659CB72DD7106C0018B574 /* ChatViewController.swift */; };
 		F6659CBA2DD7107F0018B574 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6659CB92DD710770018B574 /* MyPageViewController.swift */; };
 		F6659CBC2DD7616F0018B574 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6659CBB2DD7616B0018B574 /* BannerView.swift */; };
+		F6C331772DDB18C100B8A2D5 /* MainIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C331762DDB18BB00B8A2D5 /* MainIconView.swift */; };
+		F6C331792DDB289000B8A2D5 /* PopularClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C331782DDB288500B8A2D5 /* PopularClubView.swift */; };
+		F6C3318A2DDB32FA00B8A2D5 /* PopularContestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C331892DDB32F300B8A2D5 /* PopularContestView.swift */; };
+		F6C3318C2DDB332900B8A2D5 /* PopularActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C3318B2DDB331200B8A2D5 /* PopularActivityView.swift */; };
+		F6C3318E2DDB371600B8A2D5 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C3318D2DDB370E00B8A2D5 /* EventView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -60,6 +65,11 @@
 		F6659CB72DD7106C0018B574 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		F6659CB92DD710770018B574 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
 		F6659CBB2DD7616B0018B574 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
+		F6C331762DDB18BB00B8A2D5 /* MainIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainIconView.swift; sourceTree = "<group>"; };
+		F6C331782DDB288500B8A2D5 /* PopularClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularClubView.swift; sourceTree = "<group>"; };
+		F6C331892DDB32F300B8A2D5 /* PopularContestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularContestView.swift; sourceTree = "<group>"; };
+		F6C3318B2DDB331200B8A2D5 /* PopularActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularActivityView.swift; sourceTree = "<group>"; };
+		F6C3318D2DDB370E00B8A2D5 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +263,11 @@
 		6C9946672DD0FBEF0016BF5B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F6C3318D2DDB370E00B8A2D5 /* EventView.swift */,
+				F6C3318B2DDB331200B8A2D5 /* PopularActivityView.swift */,
+				F6C331892DDB32F300B8A2D5 /* PopularContestView.swift */,
+				F6C331782DDB288500B8A2D5 /* PopularClubView.swift */,
+				F6C331762DDB18BB00B8A2D5 /* MainIconView.swift */,
 				F6659CBB2DD7616B0018B574 /* BannerView.swift */,
 				F6659CAF2DD665280018B574 /* MainHeaderView.swift */,
 			);
@@ -365,10 +380,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6C331792DDB289000B8A2D5 /* PopularClubView.swift in Sources */,
 				6C99440A2DD0ED830016BF5B /* UIFont+.swift in Sources */,
 				6C511F252DCCE59500DD3A53 /* UIStackView+.swift in Sources */,
 				6C511E472DCCE36100DD3A53 /* AppDelegate.swift in Sources */,
 				6C511F292DCCE5D900DD3A53 /* UIView+.swift in Sources */,
+				F6C3318A2DDB32FA00B8A2D5 /* PopularContestView.swift in Sources */,
 				6C511E3F2DCCBC6E00DD3A53 /* SceneDelegate.swift in Sources */,
 				F6659CB42DD710580018B574 /* StudyViewController.swift in Sources */,
 				F6659CB62DD710690018B574 /* CommunityViewController.swift in Sources */,
@@ -376,11 +393,14 @@
 				F6659CAE2DD65B280018B574 /* HomeViewController.swift in Sources */,
 				F6659CB02DD665310018B574 /* MainHeaderView.swift in Sources */,
 				6C511F272DCCE5C500DD3A53 /* UITableViewCell+.swift in Sources */,
+				F6C3318E2DDB371600B8A2D5 /* EventView.swift in Sources */,
 				6C511F232DCCE56500DD3A53 /* UICollectionViewCell+.swift in Sources */,
+				F6C3318C2DDB332900B8A2D5 /* PopularActivityView.swift in Sources */,
 				F6659CB22DD70EAA0018B574 /* TabBarController.swift in Sources */,
 				6C9944CB2DD0F1570016BF5B /* NSAttributedString+.swift in Sources */,
 				F6659CB82DD710720018B574 /* ChatViewController.swift in Sources */,
 				F6659CBC2DD7616F0018B574 /* BannerView.swift in Sources */,
+				F6C331772DDB18C100B8A2D5 /* MainIconView.swift in Sources */,
 				6C511E402DCCBC6E00DD3A53 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
