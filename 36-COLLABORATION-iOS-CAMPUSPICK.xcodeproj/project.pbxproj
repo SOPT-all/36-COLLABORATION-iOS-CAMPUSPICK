@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		33EC52F82DDB8195002C845B /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 33EC52F72DDB8195002C845B /* Config.xcconfig */; };
 		6C231A0A2DD39BC600C5F0E8 /* ClubHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A092DD39BC600C5F0E8 /* ClubHeaderView.swift */; };
 		6C231A102DD3B77B00C5F0E8 /* CategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A0F2DD3B77B00C5F0E8 /* CategoryType.swift */; };
 		6C231A142DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A132DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift */; };
@@ -35,6 +36,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33EC52F72DDB8195002C845B /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		6C231A092DD39BC600C5F0E8 /* ClubHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubHeaderView.swift; sourceTree = "<group>"; };
 		6C231A0F2DD3B77B00C5F0E8 /* CategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryType.swift; sourceTree = "<group>"; };
 		6C231A132DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 				6C511E4F2DCCE42400DD3A53 /* Network */,
 				6C511E512DCCE43C00DD3A53 /* Presentation */,
 				6C511E3C2DCCBC6E00DD3A53 /* ViewController.swift */,
+				33EC52F72DDB8195002C845B /* Config.xcconfig */,
 			);
 			path = "36-COLLABORATION-iOS-CAMPUSPICK";
 			sourceTree = "<group>";
@@ -378,6 +381,7 @@
 				6C9944052DD0EBFE0016BF5B /* Pretendard-SemiBold.otf in Resources */,
 				6C9944062DD0EBFE0016BF5B /* Pretendard-Medium.otf in Resources */,
 				6C9944072DD0EBFE0016BF5B /* Pretendard-Regular.otf in Resources */,
+				33EC52F82DDB8195002C845B /* Config.xcconfig in Resources */,
 				6C9944082DD0EBFE0016BF5B /* Pretendard-Bold.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -425,6 +429,7 @@
 /* Begin XCBuildConfiguration section */
 		6C511E222DCCBBB300DD3A53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33EC52F72DDB8195002C845B /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -452,6 +457,7 @@
 		};
 		6C511E232DCCBBB300DD3A53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33EC52F72DDB8195002C845B /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -479,6 +485,7 @@
 		};
 		6C511E242DCCBBB300DD3A53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33EC52F72DDB8195002C845B /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -543,6 +550,7 @@
 		};
 		6C511E252DCCBBB300DD3A53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33EC52F72DDB8195002C845B /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
