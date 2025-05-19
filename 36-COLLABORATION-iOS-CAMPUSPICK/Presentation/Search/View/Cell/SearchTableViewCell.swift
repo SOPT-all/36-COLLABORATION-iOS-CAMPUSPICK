@@ -78,7 +78,7 @@ class SearchTableViewCell: UITableViewCell {
     
     private let space = UIView()
     
-    // MARK: - In it
+    // MARK: - Init
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)

@@ -51,6 +51,7 @@ class FilterCollectionViewCell: UICollectionViewCell {
         addSubview(containerView)
         containerView.addSubviews(titleLabel)
     }
+    
     private func setLayout() {
         containerView.snp.makeConstraints{
             $0.edges.equalToSuperview()
