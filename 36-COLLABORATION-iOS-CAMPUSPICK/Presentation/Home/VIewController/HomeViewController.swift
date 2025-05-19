@@ -12,10 +12,9 @@ import Then
 final class HomeViewController: UIViewController {
     
     private let headerView = MainHeaderView()
+    private let bannerView = BannerView()
     
-    private let scrollView = UIScrollView().then {
-        $0.backgroundColor = .systemMint
-    }
+    private let scrollView = UIScrollView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +28,9 @@ final class HomeViewController: UIViewController {
             headerView,
             scrollView
         )
+        scrollView.addSubviews(
+            bannerView
+        )
     }
     
     private func setLayout() {
@@ -41,6 +43,12 @@ final class HomeViewController: UIViewController {
             $0.top.equalTo(headerView.snp.bottom).offset(14)
             $0.horizontalEdges.equalToSuperview()
             $0.bottom.equalTo(view.safeAreaLayoutGuide)
+        }
+        bannerView.snp.makeConstraints {
+            $0.top.equalToSuperview()
+            $0.leading.equalToSuperview()
+            $0.height.equalTo(160)
+            $0.width.equalTo(scrollView.snp.width)
         }
     }
     

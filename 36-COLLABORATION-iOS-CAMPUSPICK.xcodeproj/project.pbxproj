@@ -31,6 +31,7 @@
 		F6659CB62DD710690018B574 /* CommunityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6659CB52DD7105C0018B574 /* CommunityViewController.swift */; };
 		F6659CB82DD710720018B574 /* ChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6659CB72DD7106C0018B574 /* ChatViewController.swift */; };
 		F6659CBA2DD7107F0018B574 /* MyPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6659CB92DD710770018B574 /* MyPageViewController.swift */; };
+		F6659CBC2DD7616F0018B574 /* BannerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6659CBB2DD7616B0018B574 /* BannerView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,7 @@
 		F6659CB52DD7105C0018B574 /* CommunityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommunityViewController.swift; sourceTree = "<group>"; };
 		F6659CB72DD7106C0018B574 /* ChatViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatViewController.swift; sourceTree = "<group>"; };
 		F6659CB92DD710770018B574 /* MyPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPageViewController.swift; sourceTree = "<group>"; };
+		F6659CBB2DD7616B0018B574 /* BannerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BannerView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -251,6 +253,7 @@
 		6C9946672DD0FBEF0016BF5B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F6659CBB2DD7616B0018B574 /* BannerView.swift */,
 				F6659CAF2DD665280018B574 /* MainHeaderView.swift */,
 			);
 			path = View;
@@ -377,6 +380,7 @@
 				F6659CB22DD70EAA0018B574 /* TabBarController.swift in Sources */,
 				6C9944CB2DD0F1570016BF5B /* NSAttributedString+.swift in Sources */,
 				F6659CB82DD710720018B574 /* ChatViewController.swift in Sources */,
+				F6659CBC2DD7616F0018B574 /* BannerView.swift in Sources */,
 				6C511E402DCCBC6E00DD3A53 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
