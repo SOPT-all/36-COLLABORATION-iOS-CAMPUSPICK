@@ -15,6 +15,8 @@ enum NetworkError: LocalizedError {
     case internalServerError
     case decodingError
     case networkFail
+    case urlError
+    case httpURLResponseError
     
     var errorDescription: String? {
         switch self {
@@ -32,6 +34,10 @@ enum NetworkError: LocalizedError {
             return "데이터 변환 중 오류가 발생했습니다"
         case .networkFail:
             return "네트워크 연결에 실패했습니다"
+        case .urlError:
+            return "사용할 수 없는 URL입니다"
+        case .httpURLResponseError:
+            return "HTTPURLResponse로 타입 캐스팅 불가"
         }
     }
 }
