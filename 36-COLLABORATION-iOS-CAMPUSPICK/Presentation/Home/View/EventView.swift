@@ -20,17 +20,17 @@ final class EventView: UIView {
     
     private lazy var buttonView = UIView().then {
         $0.isUserInteractionEnabled = true
-        $0.addGestureRecognizer(self.touchViewGesture)
+        $0.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(moreButtonTap)))
     }
     private let buttonLabel = UILabel().then {
         $0.attributedText = .sopt("더 보기", style: .caption3)
+        $0.isUserInteractionEnabled = false
         $0.textColor = .gray2
     }
     private let moreButton = UIButton().then {
         $0.setImage(.arrowSmall, for: .normal)
         $0.isUserInteractionEnabled = false
     }
-    private let touchViewGesture = UIGestureRecognizer(target: EventView.self, action: #selector(moreButtonTap))
     
     
     // MARK: - Init
@@ -66,16 +66,18 @@ final class EventView: UIView {
         }
         buttonView.snp.makeConstraints {
             $0.centerY.equalTo(titleLabel.snp.centerY)
-            $0.trailing.equalToSuperview().inset(20)
+            $0.trailing.equalToSuperview().inset(10)
+            $0.width.equalTo(40)
+            $0.height.equalTo(12)
         }
-        /// 이거 뭐가 문제지..
+        
         buttonLabel.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.trailing.equalToSuperview()
+            $0.leading.equalToSuperview()
         }
         moreButton.snp.makeConstraints {
             $0.centerY.equalToSuperview()
-            $0.leading.equalToSuperview()
+            $0.trailing.equalToSuperview()
         }
     }
     
