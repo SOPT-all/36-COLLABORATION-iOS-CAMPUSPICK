@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6C231A0A2DD39BC600C5F0E8 /* ClubHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A092DD39BC600C5F0E8 /* ClubHeaderView.swift */; };
+		6C231A102DD3B77B00C5F0E8 /* CategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A0F2DD3B77B00C5F0E8 /* CategoryType.swift */; };
+		6C231A142DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A132DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift */; };
+		6C231A162DD3CAB900C5F0E8 /* PopularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A152DD3CAB900C5F0E8 /* PopularView.swift */; };
+		6C231A182DD3CDA200C5F0E8 /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A172DD3CDA200C5F0E8 /* RankingView.swift */; };
+		6C231A1A2DD3D0A400C5F0E8 /* FindClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A192DD3D0A400C5F0E8 /* FindClubView.swift */; };
+		6C3688082DD7086000DE281C /* HeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3688062DD7086000DE281C /* HeaderType.swift */; };
 		6C511E3F2DCCBC6E00DD3A53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511E3B2DCCBC6E00DD3A53 /* SceneDelegate.swift */; };
 		6C511E402DCCBC6E00DD3A53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511E3C2DCCBC6E00DD3A53 /* ViewController.swift */; };
 		6C511E412DCCBC6E00DD3A53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C511E372DCCBC6E00DD3A53 /* Assets.xcassets */; };
@@ -37,9 +44,18 @@
 		F6C3318A2DDB32FA00B8A2D5 /* PopularContestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C331892DDB32F300B8A2D5 /* PopularContestView.swift */; };
 		F6C3318C2DDB332900B8A2D5 /* PopularActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C3318B2DDB331200B8A2D5 /* PopularActivityView.swift */; };
 		F6C3318E2DDB371600B8A2D5 /* EventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F6C3318D2DDB370E00B8A2D5 /* EventView.swift */; };
+		6CD0A8612DD39AAF0063D041 /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD0A8602DD39AAF0063D041 /* ClubViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		33EC52F92DDB8F1C002C845B /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		6C231A092DD39BC600C5F0E8 /* ClubHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubHeaderView.swift; sourceTree = "<group>"; };
+		6C231A0F2DD3B77B00C5F0E8 /* CategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryType.swift; sourceTree = "<group>"; };
+		6C231A132DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		6C231A152DD3CAB900C5F0E8 /* PopularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularView.swift; sourceTree = "<group>"; };
+		6C231A172DD3CDA200C5F0E8 /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
+		6C231A192DD3D0A400C5F0E8 /* FindClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindClubView.swift; sourceTree = "<group>"; };
+		6C3688062DD7086000DE281C /* HeaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderType.swift; sourceTree = "<group>"; };
 		6C511E0E2DCCBBB100DD3A53 /* 36-COLLABORATION-iOS-CAMPUSPICK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "36-COLLABORATION-iOS-CAMPUSPICK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C511E372DCCBC6E00DD3A53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C511E382DCCBC6E00DD3A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -70,6 +86,7 @@
 		F6C331892DDB32F300B8A2D5 /* PopularContestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularContestView.swift; sourceTree = "<group>"; };
 		F6C3318B2DDB331200B8A2D5 /* PopularActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularActivityView.swift; sourceTree = "<group>"; };
 		F6C3318D2DDB370E00B8A2D5 /* EventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventView.swift; sourceTree = "<group>"; };
+		6CD0A8602DD39AAF0063D041 /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,9 +102,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6C231A0C2DD3B74C00C5F0E8 /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				6C231A0F2DD3B77B00C5F0E8 /* CategoryType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
+		6C231A122DD3B9DA00C5F0E8 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				6C231A132DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		6C3688072DD7086000DE281C /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				6C3688062DD7086000DE281C /* HeaderType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		6C511E052DCCBBB100DD3A53 = {
 			isa = PBXGroup;
 			children = (
+				33EC52F92DDB8F1C002C845B /* Config.xcconfig */,
 				6C511E3D2DCCBC6E00DD3A53 /* 36-COLLABORATION-iOS-CAMPUSPICK */,
 				6C511E0F2DCCBBB100DD3A53 /* Products */,
 			);
@@ -176,6 +218,8 @@
 		6C511E532DCCE46600DD3A53 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				6C3688072DD7086000DE281C /* Enum */,
+				6C231A092DD39BC600C5F0E8 /* ClubHeaderView.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -225,6 +269,7 @@
 		6C9946622DD0FBED0016BF5B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				6C231A0C2DD3B74C00C5F0E8 /* Enum */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -232,6 +277,10 @@
 		6C9946632DD0FBED0016BF5B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				6C231A122DD3B9DA00C5F0E8 /* Cell */,
+				6C231A152DD3CAB900C5F0E8 /* PopularView.swift */,
+				6C231A172DD3CDA200C5F0E8 /* RankingView.swift */,
+				6C231A192DD3D0A400C5F0E8 /* FindClubView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -239,6 +288,7 @@
 		6C9946642DD0FBED0016BF5B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				6CD0A8602DD39AAF0063D041 /* ClubViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -382,8 +432,11 @@
 			files = (
 				F6C331792DDB289000B8A2D5 /* PopularClubView.swift in Sources */,
 				6C99440A2DD0ED830016BF5B /* UIFont+.swift in Sources */,
+				6C231A182DD3CDA200C5F0E8 /* RankingView.swift in Sources */,
+				6C231A162DD3CAB900C5F0E8 /* PopularView.swift in Sources */,
 				6C511F252DCCE59500DD3A53 /* UIStackView+.swift in Sources */,
 				6C511E472DCCE36100DD3A53 /* AppDelegate.swift in Sources */,
+				6C231A102DD3B77B00C5F0E8 /* CategoryType.swift in Sources */,
 				6C511F292DCCE5D900DD3A53 /* UIView+.swift in Sources */,
 				F6C3318A2DDB32FA00B8A2D5 /* PopularContestView.swift in Sources */,
 				6C511E3F2DCCBC6E00DD3A53 /* SceneDelegate.swift in Sources */,
@@ -392,6 +445,7 @@
 				F6659CBA2DD7107F0018B574 /* MyPageViewController.swift in Sources */,
 				F6659CAE2DD65B280018B574 /* HomeViewController.swift in Sources */,
 				F6659CB02DD665310018B574 /* MainHeaderView.swift in Sources */,
+				6C231A0A2DD39BC600C5F0E8 /* ClubHeaderView.swift in Sources */,
 				6C511F272DCCE5C500DD3A53 /* UITableViewCell+.swift in Sources */,
 				F6C3318E2DDB371600B8A2D5 /* EventView.swift in Sources */,
 				6C511F232DCCE56500DD3A53 /* UICollectionViewCell+.swift in Sources */,
@@ -401,6 +455,10 @@
 				F6659CB82DD710720018B574 /* ChatViewController.swift in Sources */,
 				F6659CBC2DD7616F0018B574 /* BannerView.swift in Sources */,
 				F6C331772DDB18C100B8A2D5 /* MainIconView.swift in Sources */,
+				6C231A142DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift in Sources */,
+				6C231A1A2DD3D0A400C5F0E8 /* FindClubView.swift in Sources */,
+				6C3688082DD7086000DE281C /* HeaderType.swift in Sources */,
+				6CD0A8612DD39AAF0063D041 /* ClubViewController.swift in Sources */,
 				6C511E402DCCBC6E00DD3A53 /* ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -421,6 +479,7 @@
 /* Begin XCBuildConfiguration section */
 		6C511E222DCCBBB300DD3A53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33EC52F92DDB8F1C002C845B /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -448,6 +507,7 @@
 		};
 		6C511E232DCCBBB300DD3A53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33EC52F92DDB8F1C002C845B /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -475,6 +535,7 @@
 		};
 		6C511E242DCCBBB300DD3A53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33EC52F92DDB8F1C002C845B /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -539,6 +600,7 @@
 		};
 		6C511E252DCCBBB300DD3A53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 33EC52F92DDB8F1C002C845B /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
