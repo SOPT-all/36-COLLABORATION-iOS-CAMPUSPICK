@@ -18,7 +18,7 @@ final class ClubViewController: UIViewController {
         $0.showsVerticalScrollIndicator = false
     }
     private let contentView = UIView()
-    private var headerView = ClubHeaderView(type: HeaderType.withOutFilter)
+    private var headerView = ClubHeaderView(type: ClubHeaderType.withOutFilter)
     private let seperatorView1 = UIView().then {
         $0.backgroundColor = .gray4
     }
@@ -45,10 +45,14 @@ final class ClubViewController: UIViewController {
         
         setUI()
         setLayout()
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
+        Task {
+            await fetchClubRanking()
+        }
     }
     
     
@@ -121,4 +125,28 @@ final class ClubViewController: UIViewController {
         }
     }
 
+}
+
+
+// MARK: - NETWORK
+
+extension ClubViewController {
+    func fetchClubRanking() async {
+        let result = await NetworkService.shared.clubService.getClubRanking()
+        
+        switch result {
+        case .success(let data):
+            print("✅ Club Ranking Data:")
+            if let clubs = data.data {
+                for club in clubs {
+                    print("ID: \(club.id), Name: \(club.clubName), Intro: \(club.clubIntroduce)")
+                }
+            } else {
+                print("데이터가 없습니다")
+            }
+            
+        case .failure(let error):
+            print("❌ Error fetching club ranking: \(error)")
+        }
+    }
 }

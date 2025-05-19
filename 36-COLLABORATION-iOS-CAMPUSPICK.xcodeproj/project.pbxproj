@@ -13,7 +13,7 @@
 		6C231A162DD3CAB900C5F0E8 /* PopularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A152DD3CAB900C5F0E8 /* PopularView.swift */; };
 		6C231A182DD3CDA200C5F0E8 /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A172DD3CDA200C5F0E8 /* RankingView.swift */; };
 		6C231A1A2DD3D0A400C5F0E8 /* FindClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A192DD3D0A400C5F0E8 /* FindClubView.swift */; };
-		6C3688082DD7086000DE281C /* HeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3688062DD7086000DE281C /* HeaderType.swift */; };
+		6C3688082DD7086000DE281C /* ClubHeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3688062DD7086000DE281C /* ClubHeaderType.swift */; };
 		6C511E3F2DCCBC6E00DD3A53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511E3B2DCCBC6E00DD3A53 /* SceneDelegate.swift */; };
 		6C511E402DCCBC6E00DD3A53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511E3C2DCCBC6E00DD3A53 /* ViewController.swift */; };
 		6C511E412DCCBC6E00DD3A53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C511E372DCCBC6E00DD3A53 /* Assets.xcassets */; };
@@ -33,6 +33,15 @@
 		6C9944D12DD0F2AA0016BF5B /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 6C9944D02DD0F2AA0016BF5B /* Then */; };
 		6CB65AC12DDB915E00AD9BD1 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6CB65AC02DDB915E00AD9BD1 /* Config.xcconfig */; };
 		6CB65AC52DDB92BA00AD9BD1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB65AC42DDB92BA00AD9BD1 /* NetworkError.swift */; };
+		6CB65AC72DDB933100AD9BD1 /* BaseResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB65AC62DDB933100AD9BD1 /* BaseResponseDTO.swift */; };
+		6CB65AC92DDB93B100AD9BD1 /* ErrorResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB65AC82DDB93B100AD9BD1 /* ErrorResponseDTO.swift */; };
+		6CB65ACB2DDB9C6300AD9BD1 /* BaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB65ACA2DDB9C6300AD9BD1 /* BaseService.swift */; };
+		6CB65ACD2DDB9DAB00AD9BD1 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB65ACC2DDB9DAB00AD9BD1 /* BaseTargetType.swift */; };
+		6CB65AD12DDB9F4600AD9BD1 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB65AD02DDB9F4600AD9BD1 /* NetworkService.swift */; };
+		6CB65AD72DDBA68000AD9BD1 /* ClubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB65AD62DDBA68000AD9BD1 /* ClubAPI.swift */; };
+		6CB65AD92DDBA68B00AD9BD1 /* ClubService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB65AD82DDBA68B00AD9BD1 /* ClubService.swift */; };
+		6CB65ADB2DDBA79300AD9BD1 /* HTTPMethodType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB65ADA2DDBA79300AD9BD1 /* HTTPMethodType.swift */; };
+		6CB65AE12DDBAEE000AD9BD1 /* ClubRankingResponseDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB65AE02DDBAEE000AD9BD1 /* ClubRankingResponseDTO.swift */; };
 		6CD0A8612DD39AAF0063D041 /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD0A8602DD39AAF0063D041 /* ClubViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,7 +52,7 @@
 		6C231A152DD3CAB900C5F0E8 /* PopularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularView.swift; sourceTree = "<group>"; };
 		6C231A172DD3CDA200C5F0E8 /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
 		6C231A192DD3D0A400C5F0E8 /* FindClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindClubView.swift; sourceTree = "<group>"; };
-		6C3688062DD7086000DE281C /* HeaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderType.swift; sourceTree = "<group>"; };
+		6C3688062DD7086000DE281C /* ClubHeaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubHeaderType.swift; sourceTree = "<group>"; };
 		6C511E0E2DCCBBB100DD3A53 /* 36-COLLABORATION-iOS-CAMPUSPICK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "36-COLLABORATION-iOS-CAMPUSPICK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C511E372DCCBC6E00DD3A53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C511E382DCCBC6E00DD3A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -63,6 +72,15 @@
 		6C9944CA2DD0F1570016BF5B /* NSAttributedString+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+.swift"; sourceTree = "<group>"; };
 		6CB65AC02DDB915E00AD9BD1 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		6CB65AC42DDB92BA00AD9BD1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		6CB65AC62DDB933100AD9BD1 /* BaseResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseResponseDTO.swift; sourceTree = "<group>"; };
+		6CB65AC82DDB93B100AD9BD1 /* ErrorResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorResponseDTO.swift; sourceTree = "<group>"; };
+		6CB65ACA2DDB9C6300AD9BD1 /* BaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseService.swift; sourceTree = "<group>"; };
+		6CB65ACC2DDB9DAB00AD9BD1 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
+		6CB65AD02DDB9F4600AD9BD1 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		6CB65AD62DDBA68000AD9BD1 /* ClubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubAPI.swift; sourceTree = "<group>"; };
+		6CB65AD82DDBA68B00AD9BD1 /* ClubService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubService.swift; sourceTree = "<group>"; };
+		6CB65ADA2DDBA79300AD9BD1 /* HTTPMethodType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HTTPMethodType.swift; sourceTree = "<group>"; };
+		6CB65AE02DDBAEE000AD9BD1 /* ClubRankingResponseDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubRankingResponseDTO.swift; sourceTree = "<group>"; };
 		6CD0A8602DD39AAF0063D041 /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,7 +116,7 @@
 		6C3688072DD7086000DE281C /* Enum */ = {
 			isa = PBXGroup;
 			children = (
-				6C3688062DD7086000DE281C /* HeaderType.swift */,
+				6C3688062DD7086000DE281C /* ClubHeaderType.swift */,
 			);
 			path = Enum;
 			sourceTree = "<group>";
@@ -179,6 +197,7 @@
 			isa = PBXGroup;
 			children = (
 				6CB65AC32DDB92B000AD9BD1 /* Base */,
+				6CB65AD52DDBA67400AD9BD1 /* Club */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -316,8 +335,40 @@
 			isa = PBXGroup;
 			children = (
 				6CB65AC42DDB92BA00AD9BD1 /* NetworkError.swift */,
+				6CB65AC62DDB933100AD9BD1 /* BaseResponseDTO.swift */,
+				6CB65AC82DDB93B100AD9BD1 /* ErrorResponseDTO.swift */,
+				6CB65ACA2DDB9C6300AD9BD1 /* BaseService.swift */,
+				6CB65ACC2DDB9DAB00AD9BD1 /* BaseTargetType.swift */,
+				6CB65AD02DDB9F4600AD9BD1 /* NetworkService.swift */,
+				6CB65ADA2DDBA79300AD9BD1 /* HTTPMethodType.swift */,
 			);
 			path = Base;
+			sourceTree = "<group>";
+		};
+		6CB65AD52DDBA67400AD9BD1 /* Club */ = {
+			isa = PBXGroup;
+			children = (
+				6CB65ADE2DDBAECF00AD9BD1 /* Response */,
+				6CB65ADF2DDBAED000AD9BD1 /* Request */,
+				6CB65AD62DDBA68000AD9BD1 /* ClubAPI.swift */,
+				6CB65AD82DDBA68B00AD9BD1 /* ClubService.swift */,
+			);
+			path = Club;
+			sourceTree = "<group>";
+		};
+		6CB65ADE2DDBAECF00AD9BD1 /* Response */ = {
+			isa = PBXGroup;
+			children = (
+				6CB65AE02DDBAEE000AD9BD1 /* ClubRankingResponseDTO.swift */,
+			);
+			path = Response;
+			sourceTree = "<group>";
+		};
+		6CB65ADF2DDBAED000AD9BD1 /* Request */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Request;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -404,8 +455,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6CB65AD72DDBA68000AD9BD1 /* ClubAPI.swift in Sources */,
 				6C99440A2DD0ED830016BF5B /* UIFont+.swift in Sources */,
+				6CB65AE12DDBAEE000AD9BD1 /* ClubRankingResponseDTO.swift in Sources */,
 				6C231A182DD3CDA200C5F0E8 /* RankingView.swift in Sources */,
+				6CB65AD92DDBA68B00AD9BD1 /* ClubService.swift in Sources */,
+				6CB65AD12DDB9F4600AD9BD1 /* NetworkService.swift in Sources */,
 				6C231A162DD3CAB900C5F0E8 /* PopularView.swift in Sources */,
 				6C511F252DCCE59500DD3A53 /* UIStackView+.swift in Sources */,
 				6C511E472DCCE36100DD3A53 /* AppDelegate.swift in Sources */,
@@ -415,13 +470,18 @@
 				6C231A0A2DD39BC600C5F0E8 /* ClubHeaderView.swift in Sources */,
 				6C511F272DCCE5C500DD3A53 /* UITableViewCell+.swift in Sources */,
 				6C511F232DCCE56500DD3A53 /* UICollectionViewCell+.swift in Sources */,
+				6CB65ACB2DDB9C6300AD9BD1 /* BaseService.swift in Sources */,
 				6C9944CB2DD0F1570016BF5B /* NSAttributedString+.swift in Sources */,
+				6CB65ADB2DDBA79300AD9BD1 /* HTTPMethodType.swift in Sources */,
 				6C231A142DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift in Sources */,
+				6CB65AC92DDB93B100AD9BD1 /* ErrorResponseDTO.swift in Sources */,
+				6CB65ACD2DDB9DAB00AD9BD1 /* BaseTargetType.swift in Sources */,
 				6C231A1A2DD3D0A400C5F0E8 /* FindClubView.swift in Sources */,
-				6C3688082DD7086000DE281C /* HeaderType.swift in Sources */,
+				6C3688082DD7086000DE281C /* ClubHeaderType.swift in Sources */,
 				6CB65AC52DDB92BA00AD9BD1 /* NetworkError.swift in Sources */,
 				6CD0A8612DD39AAF0063D041 /* ClubViewController.swift in Sources */,
 				6C511E402DCCBC6E00DD3A53 /* ViewController.swift in Sources */,
+				6CB65AC72DDB933100AD9BD1 /* BaseResponseDTO.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -441,6 +501,7 @@
 /* Begin XCBuildConfiguration section */
 		6C511E222DCCBBB300DD3A53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CB65AC02DDB915E00AD9BD1 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -468,6 +529,7 @@
 		};
 		6C511E232DCCBBB300DD3A53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CB65AC02DDB915E00AD9BD1 /* Config.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -495,6 +557,7 @@
 		};
 		6C511E242DCCBBB300DD3A53 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CB65AC02DDB915E00AD9BD1 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -559,6 +622,7 @@
 		};
 		6C511E252DCCBBB300DD3A53 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6CB65AC02DDB915E00AD9BD1 /* Config.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
