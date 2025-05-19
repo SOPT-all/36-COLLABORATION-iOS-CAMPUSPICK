@@ -140,6 +140,9 @@ extension ClubViewController {
             if let clubs = data.data {
                 for club in clubs {
                     print("ID: \(club.id), Name: \(club.clubName), Intro: \(club.clubIntroduce)")
+                    Task {
+                        self.rankingView.configureData(clubs)
+                    }
                 }
             } else {
                 print("데이터가 없습니다")

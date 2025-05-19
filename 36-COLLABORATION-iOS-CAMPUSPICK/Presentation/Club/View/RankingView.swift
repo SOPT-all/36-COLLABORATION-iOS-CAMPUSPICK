@@ -11,6 +11,7 @@ import SnapKit
 import Then
 
 class RankingView: UIView {
+    private var data: [ClubRankingData] = []
     
     // MARK: - Components
 
@@ -25,6 +26,15 @@ class RankingView: UIView {
         $0.setTitleColor(.gray2, for: .normal)
     }
     
+    private let collectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewLayout())
+        .then {
+            let layout = UICollectionViewFlowLayout()
+            layout.scrollDirection = .vertical
+            $0.collectionViewLayout = layout
+            $0.register(ClubRankingCell.self, forCellWithReuseIdentifier: ClubRankingCell.cellIdentifier)
+            $0.showsHorizontalScrollIndicator = false
+        }
+    
     
     // MARK: - Life Cycle
 
@@ -35,6 +45,7 @@ class RankingView: UIView {
         
         setUI()
         setLayout()
+        setDelegate()
     }
     
     required init?(coder: NSCoder) {
@@ -45,7 +56,7 @@ class RankingView: UIView {
     // MARK: - Setting Method
 
     private func setUI() {
-        self.addSubviews(titleLabel, moreButton)
+        self.addSubviews(titleLabel, moreButton, collectionView)
     }
     
     private func setLayout() {
@@ -58,6 +69,57 @@ class RankingView: UIView {
             $0.centerY.equalTo(titleLabel)
             $0.trailing.equalToSuperview().inset(15)
         }
+        
+        collectionView.snp.makeConstraints {
+            $0.top.equalTo(titleLabel.snp.bottom).offset(12)
+            $0.centerX.equalToSuperview()
+            $0.height.equalTo(201)
+            $0.width.equalTo(334)
+        }
     }
     
+    private func setDelegate() {
+        collectionView.do {
+            $0.delegate = self
+            $0.dataSource = self
+        }
+    }
+    
+    func configureData(_ newData: [ClubRankingData]) {
+        self.data = newData
+        self.collectionView.reloadData()
+    }
+}
+
+// MARK: - Delegate & DataSource
+
+extension RankingView: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        data.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: ClubRankingCell.cellIdentifier, for: indexPath)
+                as? ClubRankingCell
+        else {
+            return UICollectionViewCell()
+        }
+        
+        cell.configure(item: data[indexPath.row])
+        return cell
+    }
+}
+
+extension RankingView: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        15
+    }
+
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: 334, height: 57)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+    }
 }
