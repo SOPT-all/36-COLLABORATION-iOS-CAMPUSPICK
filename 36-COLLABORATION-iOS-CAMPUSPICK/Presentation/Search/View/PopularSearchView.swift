@@ -35,6 +35,7 @@ final class PopularSearchView: UIView {
         $0.isScrollEnabled = false
     }
 
+    
     // MARK: - Init
     
     override init(frame: CGRect) {

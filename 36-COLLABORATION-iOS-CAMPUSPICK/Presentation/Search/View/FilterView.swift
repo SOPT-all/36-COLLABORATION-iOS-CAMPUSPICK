@@ -16,6 +16,7 @@ final class FilterView<T: FilterOptionType & CaseIterable>: UIView, UICollection
     private var selectedOption: T?
     var onSelectionChanged: ((T) -> Void)?
     
+    
     // MARK: - Property
     
     private let titleLabel = UILabel().then {
@@ -36,6 +37,7 @@ final class FilterView<T: FilterOptionType & CaseIterable>: UIView, UICollection
         $0.isScrollEnabled = false
     }
 
+    
     // MARK: - Init
     
     init(title: String) {

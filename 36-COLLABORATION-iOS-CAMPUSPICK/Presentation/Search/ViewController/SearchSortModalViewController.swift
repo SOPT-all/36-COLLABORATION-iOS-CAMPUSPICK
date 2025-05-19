@@ -42,6 +42,7 @@ final class SearchSortModalViewController: UIViewController {
         setLayout()
     }
     
+    
     // MARK: - Set UI
     
     private func setStyle() {
@@ -80,6 +81,7 @@ extension SearchSortModalViewController: UITableViewDataSource {
         return cell
     }
 }
+
 
 // MARK: - UITableViewDelegate
 
