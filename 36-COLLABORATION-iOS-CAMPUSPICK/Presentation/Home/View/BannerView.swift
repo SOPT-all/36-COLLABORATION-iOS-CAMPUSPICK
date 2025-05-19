@@ -53,6 +53,7 @@ final class BannerView: UIView {
         $0.hidesForSinglePage = true
         $0.pageIndicatorTintColor = .lightGray
         $0.currentPageIndicatorTintColor = .mainBlue
+        $0.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
     }
     
     
@@ -85,11 +86,11 @@ final class BannerView: UIView {
     private func setLayout() {
         scrollView.snp.makeConstraints {
             $0.top.leading.trailing.equalToSuperview()
-            $0.bottom.equalToSuperview().inset(40)
+            $0.bottom.equalToSuperview().inset(36)
         }
 
         pageControl.snp.makeConstraints {
-            $0.top.equalTo(scrollView.snp.bottom).offset(6)
+            $0.top.equalTo(scrollView.snp.bottom)
             $0.centerX.equalToSuperview()
         }
         

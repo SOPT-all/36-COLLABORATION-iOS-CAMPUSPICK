@@ -72,7 +72,7 @@ final class HomeViewController: UIViewController {
         bannerView.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.leading.equalToSuperview()
-            $0.height.equalTo(160)
+            $0.height.equalTo(145)
             $0.width.equalTo(scrollView.snp.width)
         }
         mainIconView.snp.makeConstraints {
@@ -102,7 +102,7 @@ final class HomeViewController: UIViewController {
         eventView.snp.makeConstraints {
             $0.top.equalTo(popularContestView.snp.bottom)
             $0.horizontalEdges.equalToSuperview()
-            $0.height.equalTo(350)
+            $0.height.equalTo(370)
             $0.width.equalToSuperview()
             $0.bottom.equalToSuperview()
         }
