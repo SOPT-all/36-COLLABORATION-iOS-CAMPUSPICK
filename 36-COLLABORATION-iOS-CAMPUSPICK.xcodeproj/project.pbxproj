@@ -32,6 +32,7 @@
 		6C9944CE2DD0F2A00016BF5B /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 6C9944CD2DD0F2A00016BF5B /* SnapKit */; };
 		6C9944D12DD0F2AA0016BF5B /* Then in Frameworks */ = {isa = PBXBuildFile; productRef = 6C9944D02DD0F2AA0016BF5B /* Then */; };
 		6CB65AC12DDB915E00AD9BD1 /* Config.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 6CB65AC02DDB915E00AD9BD1 /* Config.xcconfig */; };
+		6CB65AC52DDB92BA00AD9BD1 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CB65AC42DDB92BA00AD9BD1 /* NetworkError.swift */; };
 		6CD0A8612DD39AAF0063D041 /* ClubViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6CD0A8602DD39AAF0063D041 /* ClubViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		6C9944092DD0ED830016BF5B /* UIFont+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+.swift"; sourceTree = "<group>"; };
 		6C9944CA2DD0F1570016BF5B /* NSAttributedString+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+.swift"; sourceTree = "<group>"; };
 		6CB65AC02DDB915E00AD9BD1 /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
+		6CB65AC42DDB92BA00AD9BD1 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		6CD0A8602DD39AAF0063D041 /* ClubViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +178,7 @@
 		6C511E4F2DCCE42400DD3A53 /* Network */ = {
 			isa = PBXGroup;
 			children = (
+				6CB65AC32DDB92B000AD9BD1 /* Base */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -309,6 +312,14 @@
 			path = Home;
 			sourceTree = "<group>";
 		};
+		6CB65AC32DDB92B000AD9BD1 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				6CB65AC42DDB92BA00AD9BD1 /* NetworkError.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -408,6 +419,7 @@
 				6C231A142DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift in Sources */,
 				6C231A1A2DD3D0A400C5F0E8 /* FindClubView.swift in Sources */,
 				6C3688082DD7086000DE281C /* HeaderType.swift in Sources */,
+				6CB65AC52DDB92BA00AD9BD1 /* NetworkError.swift in Sources */,
 				6CD0A8612DD39AAF0063D041 /* ClubViewController.swift in Sources */,
 				6C511E402DCCBC6E00DD3A53 /* ViewController.swift in Sources */,
 			);
