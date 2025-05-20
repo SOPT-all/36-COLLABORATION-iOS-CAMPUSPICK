@@ -151,6 +151,35 @@ final class EventView: UIView {
     
     @objc private func moreButtonTap() {
         print("더 보기 버튼 눌림!!")
+        let label = UILabel()
+        label.backgroundColor = UIColor.systemGreen.withAlphaComponent(0.3)
+        label.textColor = UIColor.white
+        label.textAlignment = .center
+        label.text = "더보기 버튼 눌림!!"
+        label.alpha = 0.0
+        label.layer.cornerRadius = 10
+        label.clipsToBounds = true
+        
+        self.addSubview(label)
+        
+        label.snp.makeConstraints {
+            $0.centerX.equalToSuperview()
+            $0.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(40)
+            $0.width.equalToSuperview().multipliedBy(0.6)
+            $0.height.equalTo(35)
+        }
+        
+        UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseIn, animations: {
+            label.alpha = 1.0
+        }, completion: { _ in
+            
+            
+            UIView.animate(withDuration: 1.0, delay: 0.5, options: .curveEaseOut, animations: {
+                label.alpha = 0.0
+            }, completion: { _ in
+                label.removeFromSuperview()
+            })
+        })
     }
     
     @objc private func pageControlChanged(_ sender: UIPageControl) {
@@ -166,14 +195,5 @@ extension EventView: UIScrollViewDelegate {
     func scrollViewDidScroll(_ sv: UIScrollView) {
         let page = Int((sv.contentOffset.x + sv.bounds.width/2) / sv.bounds.width)
         pageControl.currentPage = page
-    }
-}
-
-/// 특정 모서리만 둥글게 만드는 함수
-extension UIView {
-    func roundCorners(cornerRadius: CGFloat, maskedCorners: CACornerMask) {
-        clipsToBounds = true
-        layer.cornerRadius = cornerRadius
-        layer.maskedCorners = CACornerMask(arrayLiteral: maskedCorners)
     }
 }
