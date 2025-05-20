@@ -11,7 +11,7 @@ import SnapKit
 import Then
 
 class RankingView: UIView {
-    let mockData = ClubRankingModel.dummy()
+    private var data: [ClubRankingData] = []
     
     // MARK: - Components
 
@@ -84,13 +84,18 @@ class RankingView: UIView {
             $0.dataSource = self
         }
     }
+    
+    func configureData(_ newData: [ClubRankingData]) {
+        self.data = newData
+        self.collectionView.reloadData()
+    }
 }
 
 // MARK: - Delegate & DataSource
 
 extension RankingView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        mockData.count
+        data.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -100,7 +105,7 @@ extension RankingView: UICollectionViewDataSource {
             return UICollectionViewCell()
         }
         
-        cell.configure(item: mockData[indexPath.row])
+        cell.configure(item: data[indexPath.row])
         return cell
     }
 }
