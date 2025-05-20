@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		337F26B92DDCF4780031DF49 /* ClubSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F26B82DDCF4610031DF49 /* ClubSortView.swift */; };
 		3384D83D2DD4D893003D2E1C /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3384D83C2DD4D88E003D2E1C /* SearchModel.swift */; };
 		3384D83F2DD4DC1B003D2E1C /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3384D83E2DD4DC0B003D2E1C /* SearchTableViewCell.swift */; };
 		3384D89B2DD4EAFB003D2E1C /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3384D89A2DD4EAF1003D2E1C /* SearchResultViewController.swift */; };
@@ -30,8 +31,8 @@
 		6C231A162DD3CAB900C5F0E8 /* PopularView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A152DD3CAB900C5F0E8 /* PopularView.swift */; };
 		6C231A182DD3CDA200C5F0E8 /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A172DD3CDA200C5F0E8 /* RankingView.swift */; };
 		6C231A1A2DD3D0A400C5F0E8 /* FindClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A192DD3D0A400C5F0E8 /* FindClubView.swift */; };
-		6C3688082DD7086000DE281C /* HeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3688062DD7086000DE281C /* HeaderType.swift */; };
 		6C3688022DD7078500DE281C /* ClubRankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3688012DD7078500DE281C /* ClubRankingCell.swift */; };
+		6C3688082DD7086000DE281C /* HeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3688062DD7086000DE281C /* HeaderType.swift */; };
 		6C36880A2DD709A500DE281C /* ClubRankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3688092DD709A500DE281C /* ClubRankingModel.swift */; };
 		6C511E3F2DCCBC6E00DD3A53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511E3B2DCCBC6E00DD3A53 /* SceneDelegate.swift */; };
 		6C511E402DCCBC6E00DD3A53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511E3C2DCCBC6E00DD3A53 /* ViewController.swift */; };
@@ -54,6 +55,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		337F26B82DDCF4610031DF49 /* ClubSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubSortView.swift; sourceTree = "<group>"; };
 		3384D83C2DD4D88E003D2E1C /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		3384D83E2DD4DC0B003D2E1C /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		3384D89A2DD4EAF1003D2E1C /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
@@ -78,8 +80,8 @@
 		6C231A152DD3CAB900C5F0E8 /* PopularView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularView.swift; sourceTree = "<group>"; };
 		6C231A172DD3CDA200C5F0E8 /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
 		6C231A192DD3D0A400C5F0E8 /* FindClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindClubView.swift; sourceTree = "<group>"; };
-		6C3688062DD7086000DE281C /* HeaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderType.swift; sourceTree = "<group>"; };
 		6C3688012DD7078500DE281C /* ClubRankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubRankingCell.swift; sourceTree = "<group>"; };
+		6C3688062DD7086000DE281C /* HeaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderType.swift; sourceTree = "<group>"; };
 		6C3688092DD709A500DE281C /* ClubRankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubRankingModel.swift; sourceTree = "<group>"; };
 		6C511E0E2DCCBBB100DD3A53 /* 36-COLLABORATION-iOS-CAMPUSPICK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "36-COLLABORATION-iOS-CAMPUSPICK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C511E372DCCBC6E00DD3A53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -283,6 +285,7 @@
 		6C99465F2DD0FBEC0016BF5B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				337F26B82DDCF4610031DF49 /* ClubSortView.swift */,
 				33B010D32DD611820081CB8E /* RecentSearchView.swift */,
 				33B010E12DD68FAE0081CB8E /* PopularSearchView.swift */,
 				33B010EC2DD6EA790081CB8E /* FilterView.swift */,
@@ -471,6 +474,7 @@
 				33B010E62DD6968E0081CB8E /* SearchSortModalViewController.swift in Sources */,
 				6C511F252DCCE59500DD3A53 /* UIStackView+.swift in Sources */,
 				3384D83F2DD4DC1B003D2E1C /* SearchTableViewCell.swift in Sources */,
+				337F26B92DDCF4780031DF49 /* ClubSortView.swift in Sources */,
 				33B010DC2DD65D490081CB8E /* DeadlineType.swift in Sources */,
 				6C3688022DD7078500DE281C /* ClubRankingCell.swift in Sources */,
 				6C511E472DCCE36100DD3A53 /* AppDelegate.swift in Sources */,
