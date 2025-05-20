@@ -76,8 +76,9 @@ class ClubRankingCell: UICollectionViewCell {
     
     // MARK: - Method
 
-    func configure(item: ClubRankingModel) {
-        self.rankLabel.attributedText = .sopt(item.id.description, style: .heading2)
+    func configure(item: ClubRankingData) {
+//        self.rankLabel.attributedText = .sopt(item.id.description, style: .heading2) // 랭킹 안내려주네
+        self.rankLabel.attributedText = .sopt("1", style: .heading2)
         
         self.clubNameLabel.attributedText = .sopt(item.clubName, style: .body0)
         self.clubNameLabel.textColor = .black
