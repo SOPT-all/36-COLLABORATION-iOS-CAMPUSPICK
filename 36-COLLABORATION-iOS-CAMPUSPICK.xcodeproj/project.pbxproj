@@ -31,6 +31,8 @@
 		6C231A182DD3CDA200C5F0E8 /* RankingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A172DD3CDA200C5F0E8 /* RankingView.swift */; };
 		6C231A1A2DD3D0A400C5F0E8 /* FindClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A192DD3D0A400C5F0E8 /* FindClubView.swift */; };
 		6C3688082DD7086000DE281C /* HeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3688062DD7086000DE281C /* HeaderType.swift */; };
+		6C3688022DD7078500DE281C /* ClubRankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3688012DD7078500DE281C /* ClubRankingCell.swift */; };
+		6C36880A2DD709A500DE281C /* ClubRankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3688092DD709A500DE281C /* ClubRankingModel.swift */; };
 		6C511E3F2DCCBC6E00DD3A53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511E3B2DCCBC6E00DD3A53 /* SceneDelegate.swift */; };
 		6C511E402DCCBC6E00DD3A53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511E3C2DCCBC6E00DD3A53 /* ViewController.swift */; };
 		6C511E412DCCBC6E00DD3A53 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6C511E372DCCBC6E00DD3A53 /* Assets.xcassets */; };
@@ -77,6 +79,8 @@
 		6C231A172DD3CDA200C5F0E8 /* RankingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RankingView.swift; sourceTree = "<group>"; };
 		6C231A192DD3D0A400C5F0E8 /* FindClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindClubView.swift; sourceTree = "<group>"; };
 		6C3688062DD7086000DE281C /* HeaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderType.swift; sourceTree = "<group>"; };
+		6C3688012DD7078500DE281C /* ClubRankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubRankingCell.swift; sourceTree = "<group>"; };
+		6C3688092DD709A500DE281C /* ClubRankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubRankingModel.swift; sourceTree = "<group>"; };
 		6C511E0E2DCCBBB100DD3A53 /* 36-COLLABORATION-iOS-CAMPUSPICK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "36-COLLABORATION-iOS-CAMPUSPICK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C511E372DCCBC6E00DD3A53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6C511E382DCCBC6E00DD3A53 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -144,6 +148,7 @@
 			isa = PBXGroup;
 			children = (
 				6C231A132DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift */,
+				6C3688012DD7078500DE281C /* ClubRankingCell.swift */,
 			);
 			path = Cell;
 			sourceTree = "<group>";
@@ -311,6 +316,7 @@
 			isa = PBXGroup;
 			children = (
 				6C231A0C2DD3B74C00C5F0E8 /* Enum */,
+				6C3688092DD709A500DE281C /* ClubRankingModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -466,7 +472,9 @@
 				6C511F252DCCE59500DD3A53 /* UIStackView+.swift in Sources */,
 				3384D83F2DD4DC1B003D2E1C /* SearchTableViewCell.swift in Sources */,
 				33B010DC2DD65D490081CB8E /* DeadlineType.swift in Sources */,
+				6C3688022DD7078500DE281C /* ClubRankingCell.swift in Sources */,
 				6C511E472DCCE36100DD3A53 /* AppDelegate.swift in Sources */,
+				6C36880A2DD709A500DE281C /* ClubRankingModel.swift in Sources */,
 				6C231A102DD3B77B00C5F0E8 /* CategoryType.swift in Sources */,
 				33B010E82DD697E40081CB8E /* SortOptionTableViewCell.swift in Sources */,
 				3384D83D2DD4D893003D2E1C /* SearchModel.swift in Sources */,
