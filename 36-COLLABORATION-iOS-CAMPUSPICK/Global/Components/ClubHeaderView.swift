@@ -185,6 +185,9 @@ class ClubHeaderView: UIView {
         backButtonContainerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(backButtonTapped)))
     }
 
+    func setSearchKeyword(_ keyword: String) {
+        searchTextField.text = keyword
+    }
 }
 
 // MARK: - Method
