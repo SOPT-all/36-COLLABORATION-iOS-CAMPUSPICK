@@ -23,9 +23,7 @@ final class HomeViewController: UIViewController {
     private let popularActivityView = PopularActivityView().then {
         $0.backgroundColor = .systemGreen
     }
-    private let popularContestView = PopularContestView().then {
-        $0.backgroundColor = .systemPink
-    }
+    private let popularContestView = PopularContestView()
     private let eventView = EventView()
     
     private let scrollView = UIScrollView()
@@ -96,7 +94,7 @@ final class HomeViewController: UIViewController {
         popularContestView.snp.makeConstraints {
             $0.top.equalTo(popularActivityView.snp.bottom)
             $0.horizontalEdges.equalToSuperview()
-            $0.height.equalTo(210)
+            $0.height.equalTo(233)
             $0.width.equalToSuperview()
         }
         eventView.snp.makeConstraints {
