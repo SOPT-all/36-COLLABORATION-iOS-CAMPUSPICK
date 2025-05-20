@@ -33,7 +33,6 @@
 		6C231A1A2DD3D0A400C5F0E8 /* FindClubView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A192DD3D0A400C5F0E8 /* FindClubView.swift */; };
 		6C3688082DD7086000DE281C /* ClubHeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3688062DD7086000DE281C /* ClubHeaderType.swift */; };
 		6C3688022DD7078500DE281C /* ClubRankingCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3688012DD7078500DE281C /* ClubRankingCell.swift */; };
-		6C3688082DD7086000DE281C /* HeaderType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3688062DD7086000DE281C /* HeaderType.swift */; };
 		6C36880A2DD709A500DE281C /* ClubRankingModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C3688092DD709A500DE281C /* ClubRankingModel.swift */; };
 		6C511E3F2DCCBC6E00DD3A53 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511E3B2DCCBC6E00DD3A53 /* SceneDelegate.swift */; };
 		6C511E402DCCBC6E00DD3A53 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C511E3C2DCCBC6E00DD3A53 /* ViewController.swift */; };
@@ -94,7 +93,6 @@
 		6C231A192DD3D0A400C5F0E8 /* FindClubView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FindClubView.swift; sourceTree = "<group>"; };
 		6C3688062DD7086000DE281C /* ClubHeaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubHeaderType.swift; sourceTree = "<group>"; };
 		6C3688012DD7078500DE281C /* ClubRankingCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubRankingCell.swift; sourceTree = "<group>"; };
-		6C3688062DD7086000DE281C /* HeaderType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderType.swift; sourceTree = "<group>"; };
 		6C3688092DD709A500DE281C /* ClubRankingModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubRankingModel.swift; sourceTree = "<group>"; };
 		6C511E0E2DCCBBB100DD3A53 /* 36-COLLABORATION-iOS-CAMPUSPICK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "36-COLLABORATION-iOS-CAMPUSPICK.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6C511E372DCCBC6E00DD3A53 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
