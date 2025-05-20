@@ -117,7 +117,7 @@ class SearchTableViewCell: UITableViewCell {
     
     private func setStyle() {
         selectionStyle = .none
-        addSubviews( captionStackView, clubProfileImageView, clubNameLabel, titleLabel, imageImageView, dDayLabel, viewCountStackView, commentCountStackView, separatorLine, space )
+        contentView.addSubviews( captionStackView, clubProfileImageView, clubNameLabel, titleLabel, imageImageView, dDayLabel, viewCountStackView, commentCountStackView, separatorLine, space )
         categoryContainerView.addSubview(categoryLabel)
         regionContainerView.addSubview(regionLabel)
     }
