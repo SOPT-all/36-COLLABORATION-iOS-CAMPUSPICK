@@ -13,6 +13,8 @@ import Then
 class ClubHeaderView: UIView {
     private var headerTypeValue: HeaderType?
     
+    var onSearchIconTapped: ((String) -> Void)?
+
     // MARK: - Components
     
     private let backButtonContainerView = UIView().then {
@@ -46,10 +48,11 @@ class ClubHeaderView: UIView {
         $0.layer.cornerRadius = 18
     }
 
-    private let searchIcon = UIImageView().then {
-        $0.image = UIImage(systemName: "magnifyingglass")
+    private lazy var searchIcon = UIButton().then {
+        $0.setImage(UIImage(systemName: "magnifyingglass"), for: .normal)
         $0.tintColor = .gray2
         $0.contentMode = .scaleAspectFit
+        $0.addTarget(self, action: #selector(didTapSearchIcon), for: .touchUpInside)
     }
 
     private let searchTextField = UITextField().then {
@@ -59,7 +62,7 @@ class ClubHeaderView: UIView {
         $0.textColor = .black
     }
     
-    private lazy var filterButton = UIButton().then {
+    let filterButton = UIButton().then {
         $0.setImage(.filterIcon, for: .normal)
     }
     
@@ -209,6 +212,11 @@ extension ClubHeaderView {
     @objc private func searchBarTapped() {
         // 네비게이션 이동
         print("검색창 네비게이션 클릭")
+    }
+    
+    @objc private func didTapSearchIcon() {
+        let keyword = searchTextField.text ?? ""
+        onSearchIconTapped?(keyword)
     }
 }
 
