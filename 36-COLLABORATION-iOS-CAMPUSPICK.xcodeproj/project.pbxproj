@@ -7,6 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3384D83D2DD4D893003D2E1C /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3384D83C2DD4D88E003D2E1C /* SearchModel.swift */; };
+		3384D83F2DD4DC1B003D2E1C /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3384D83E2DD4DC0B003D2E1C /* SearchTableViewCell.swift */; };
+		3384D89B2DD4EAFB003D2E1C /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3384D89A2DD4EAF1003D2E1C /* SearchResultViewController.swift */; };
+		33B010D22DD60F450081CB8E /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B010D12DD60F450081CB8E /* SearchViewController.swift */; };
+		33B010D42DD656DA0081CB8E /* RecentSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B010D32DD611820081CB8E /* RecentSearchView.swift */; };
+		33B010D82DD658F80081CB8E /* RegionType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B010D72DD658F20081CB8E /* RegionType.swift */; };
+		33B010DA2DD65B7D0081CB8E /* DayType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B010D92DD65B740081CB8E /* DayType.swift */; };
+		33B010DC2DD65D490081CB8E /* DeadlineType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B010DB2DD65D420081CB8E /* DeadlineType.swift */; };
+		33B010DE2DD67B9D0081CB8E /* RecentSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B010DD2DD67B930081CB8E /* RecentSearchCollectionViewCell.swift */; };
+		33B010E02DD67BB40081CB8E /* PopularSearchCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B010DF2DD67BA50081CB8E /* PopularSearchCollectionViewCell.swift */; };
+		33B010E22DD68FB50081CB8E /* PopularSearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B010E12DD68FAE0081CB8E /* PopularSearchView.swift */; };
+		33B010E42DD695420081CB8E /* SearchFilterModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B010E32DD6950B0081CB8E /* SearchFilterModalViewController.swift */; };
+		33B010E62DD6968E0081CB8E /* SearchSortModalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B010E52DD696740081CB8E /* SearchSortModalViewController.swift */; };
+		33B010E82DD697E40081CB8E /* SortOptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B010E72DD697D60081CB8E /* SortOptionTableViewCell.swift */; };
+		33B010EB2DD6E8500081CB8E /* FilterCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B010EA2DD6E8470081CB8E /* FilterCollectionViewCell.swift */; };
+		33B010ED2DD6EA8A0081CB8E /* FilterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B010EC2DD6EA790081CB8E /* FilterView.swift */; };
+		33B010F32DD6FA290081CB8E /* LeftAlignedCollectionViewFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 33B010F22DD6FA290081CB8E /* LeftAlignedCollectionViewFlowLayout.swift */; };
 		6C231A0A2DD39BC600C5F0E8 /* ClubHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A092DD39BC600C5F0E8 /* ClubHeaderView.swift */; };
 		6C231A102DD3B77B00C5F0E8 /* CategoryType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A0F2DD3B77B00C5F0E8 /* CategoryType.swift */; };
 		6C231A142DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6C231A132DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift */; };
@@ -48,6 +65,24 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3384D83C2DD4D88E003D2E1C /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
+		3384D83E2DD4DC0B003D2E1C /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
+		3384D89A2DD4EAF1003D2E1C /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
+		33B010D12DD60F450081CB8E /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		33B010D32DD611820081CB8E /* RecentSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchView.swift; sourceTree = "<group>"; };
+		33B010D72DD658F20081CB8E /* RegionType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegionType.swift; sourceTree = "<group>"; };
+		33B010D92DD65B740081CB8E /* DayType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DayType.swift; sourceTree = "<group>"; };
+		33B010DB2DD65D420081CB8E /* DeadlineType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeadlineType.swift; sourceTree = "<group>"; };
+		33B010DD2DD67B930081CB8E /* RecentSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentSearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		33B010DF2DD67BA50081CB8E /* PopularSearchCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSearchCollectionViewCell.swift; sourceTree = "<group>"; };
+		33B010E12DD68FAE0081CB8E /* PopularSearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularSearchView.swift; sourceTree = "<group>"; };
+		33B010E32DD6950B0081CB8E /* SearchFilterModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFilterModalViewController.swift; sourceTree = "<group>"; };
+		33B010E52DD696740081CB8E /* SearchSortModalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchSortModalViewController.swift; sourceTree = "<group>"; };
+		33B010E72DD697D60081CB8E /* SortOptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortOptionTableViewCell.swift; sourceTree = "<group>"; };
+		33B010EA2DD6E8470081CB8E /* FilterCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCollectionViewCell.swift; sourceTree = "<group>"; };
+		33B010EC2DD6EA790081CB8E /* FilterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterView.swift; sourceTree = "<group>"; };
+		33B010F22DD6FA290081CB8E /* LeftAlignedCollectionViewFlowLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeftAlignedCollectionViewFlowLayout.swift; sourceTree = "<group>"; };
+		33EC52F92DDB8F1C002C845B /* Config.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Config.xcconfig; sourceTree = "<group>"; };
 		6C231A092DD39BC600C5F0E8 /* ClubHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubHeaderView.swift; sourceTree = "<group>"; };
 		6C231A0F2DD3B77B00C5F0E8 /* CategoryType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryType.swift; sourceTree = "<group>"; };
 		6C231A132DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderCategoryCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -101,6 +136,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3384D89C2DD4F0B3003D2E1C /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				3384D83E2DD4DC0B003D2E1C /* SearchTableViewCell.swift */,
+				33B010DD2DD67B930081CB8E /* RecentSearchCollectionViewCell.swift */,
+				33B010DF2DD67BA50081CB8E /* PopularSearchCollectionViewCell.swift */,
+				33B010EA2DD6E8470081CB8E /* FilterCollectionViewCell.swift */,
+				33B010E72DD697D60081CB8E /* SortOptionTableViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		33B010D52DD658D40081CB8E /* Enum */ = {
+			isa = PBXGroup;
+			children = (
+				33B010DB2DD65D420081CB8E /* DeadlineType.swift */,
+				33B010D72DD658F20081CB8E /* RegionType.swift */,
+				33B010D92DD65B740081CB8E /* DayType.swift */,
+			);
+			path = Enum;
+			sourceTree = "<group>";
+		};
 		6C231A0C2DD3B74C00C5F0E8 /* Enum */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,6 +277,7 @@
 		6C511E532DCCE46600DD3A53 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				33B010F22DD6FA290081CB8E /* LeftAlignedCollectionViewFlowLayout.swift */,
 				6C3688072DD7086000DE281C /* Enum */,
 				6C231A092DD39BC600C5F0E8 /* ClubHeaderView.swift */,
 			);
@@ -240,6 +298,8 @@
 		6C99465E2DD0FBEC0016BF5B /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				33B010D52DD658D40081CB8E /* Enum */,
+				3384D83C2DD4D88E003D2E1C /* SearchModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,6 +307,10 @@
 		6C99465F2DD0FBEC0016BF5B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				33B010D32DD611820081CB8E /* RecentSearchView.swift */,
+				33B010E12DD68FAE0081CB8E /* PopularSearchView.swift */,
+				33B010EC2DD6EA790081CB8E /* FilterView.swift */,
+				3384D89C2DD4F0B3003D2E1C /* Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -254,6 +318,10 @@
 		6C9946602DD0FBEC0016BF5B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				3384D89A2DD4EAF1003D2E1C /* SearchResultViewController.swift */,
+				33B010D12DD60F450081CB8E /* SearchViewController.swift */,
+				33B010E32DD6950B0081CB8E /* SearchFilterModalViewController.swift */,
+				33B010E52DD696740081CB8E /* SearchSortModalViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -464,23 +532,38 @@
 				6CB65AD72DDBA68000AD9BD1 /* ClubAPI.swift in Sources */,
 				6C99440A2DD0ED830016BF5B /* UIFont+.swift in Sources */,
 				6CB65AE12DDBAEE000AD9BD1 /* ClubRankingResponseDTO.swift in Sources */,
+				33B010E02DD67BB40081CB8E /* PopularSearchCollectionViewCell.swift in Sources */,
 				6C231A182DD3CDA200C5F0E8 /* RankingView.swift in Sources */,
 				6CB65AD92DDBA68B00AD9BD1 /* ClubService.swift in Sources */,
 				6CB65AD12DDB9F4600AD9BD1 /* NetworkService.swift in Sources */,
 				6C231A162DD3CAB900C5F0E8 /* PopularView.swift in Sources */,
+				33B010E62DD6968E0081CB8E /* SearchSortModalViewController.swift in Sources */,
 				6C511F252DCCE59500DD3A53 /* UIStackView+.swift in Sources */,
+				3384D83F2DD4DC1B003D2E1C /* SearchTableViewCell.swift in Sources */,
+				33B010DC2DD65D490081CB8E /* DeadlineType.swift in Sources */,
 				6C3688022DD7078500DE281C /* ClubRankingCell.swift in Sources */,
 				6C511E472DCCE36100DD3A53 /* AppDelegate.swift in Sources */,
 				6C36880A2DD709A500DE281C /* ClubRankingModel.swift in Sources */,
 				6C231A102DD3B77B00C5F0E8 /* CategoryType.swift in Sources */,
+				33B010E82DD697E40081CB8E /* SortOptionTableViewCell.swift in Sources */,
+				3384D83D2DD4D893003D2E1C /* SearchModel.swift in Sources */,
 				6C511F292DCCE5D900DD3A53 /* UIView+.swift in Sources */,
+				3384D89B2DD4EAFB003D2E1C /* SearchResultViewController.swift in Sources */,
+				33B010EB2DD6E8500081CB8E /* FilterCollectionViewCell.swift in Sources */,
+				33B010D22DD60F450081CB8E /* SearchViewController.swift in Sources */,
+				33B010DE2DD67B9D0081CB8E /* RecentSearchCollectionViewCell.swift in Sources */,
 				6C511E3F2DCCBC6E00DD3A53 /* SceneDelegate.swift in Sources */,
+				33B010F32DD6FA290081CB8E /* LeftAlignedCollectionViewFlowLayout.swift in Sources */,
 				6C231A0A2DD39BC600C5F0E8 /* ClubHeaderView.swift in Sources */,
+				33B010D82DD658F80081CB8E /* RegionType.swift in Sources */,
 				6C511F272DCCE5C500DD3A53 /* UITableViewCell+.swift in Sources */,
 				6C511F232DCCE56500DD3A53 /* UICollectionViewCell+.swift in Sources */,
 				6CB65ACB2DDB9C6300AD9BD1 /* BaseService.swift in Sources */,
-				6C9944CB2DD0F1570016BF5B /* NSAttributedString+.swift in Sources */,
 				6CB65ADB2DDBA79300AD9BD1 /* HTTPMethodType.swift in Sources */,
+				33B010E22DD68FB50081CB8E /* PopularSearchView.swift in Sources */,
+				33B010E42DD695420081CB8E /* SearchFilterModalViewController.swift in Sources */,
+				6C9944CB2DD0F1570016BF5B /* NSAttributedString+.swift in Sources */,
+				33B010D42DD656DA0081CB8E /* RecentSearchView.swift in Sources */,
 				6C231A142DD3B9F500C5F0E8 /* HeaderCategoryCollectionViewCell.swift in Sources */,
 				6CB65AC92DDB93B100AD9BD1 /* ErrorResponseDTO.swift in Sources */,
 				6CB65ACD2DDB9DAB00AD9BD1 /* BaseTargetType.swift in Sources */,
@@ -490,6 +573,8 @@
 				6CD0A8612DD39AAF0063D041 /* ClubViewController.swift in Sources */,
 				6C511E402DCCBC6E00DD3A53 /* ViewController.swift in Sources */,
 				6CB65AC72DDB933100AD9BD1 /* BaseResponseDTO.swift in Sources */,
+				33B010ED2DD6EA8A0081CB8E /* FilterView.swift in Sources */,
+				33B010DA2DD65B7D0081CB8E /* DayType.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -522,6 +607,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -550,6 +636,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 18.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
