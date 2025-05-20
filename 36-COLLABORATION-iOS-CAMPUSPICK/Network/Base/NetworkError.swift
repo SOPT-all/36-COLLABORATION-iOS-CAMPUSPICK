@@ -9,10 +9,10 @@ import Foundation
 
 enum NetworkError: LocalizedError {
     case apiError(message: String)
-    case badRequest
+    case badRequest                 // 400
     case unauthorized
     case notFound
-    case internalServerError
+    case internalServerError        // 500
     case decodingError
     case networkFail
     case urlError

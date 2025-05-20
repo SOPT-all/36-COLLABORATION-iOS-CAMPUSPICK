@@ -37,10 +37,14 @@ extension BaseTargetType {
         
         switch headerType {
         case .noneHeader:
-            return nil
+            return headers
         case .accessTokenHeader:
             return nil //이번 API들 중 토큰 필요한 게 없음
         }
+    }
+    
+    var body: Encodable? {
+        return nil
     }
 
     var url: URL {
@@ -49,7 +53,4 @@ extension BaseTargetType {
         return components?.url ?? baseURL.appendingPathComponent(path)
     }
     
-    var body: Encodable? {
-        return nil
-    }
 }

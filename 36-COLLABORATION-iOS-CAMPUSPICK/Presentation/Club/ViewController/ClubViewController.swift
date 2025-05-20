@@ -66,7 +66,7 @@ final class ClubViewController: UIViewController {
     
     private func setLayout() {
         scrollview.snp.makeConstraints {
-            $0.edges.equalToSuperview()
+            $0.edges.equalTo(view.safeAreaLayoutGuide.snp.edges)
         }
         
         contentView.snp.makeConstraints {
@@ -136,13 +136,9 @@ extension ClubViewController {
         
         switch result {
         case .success(let data):
-            print("✅ Club Ranking Data:")
             if let clubs = data.data {
-                for club in clubs {
-                    print("ID: \(club.id), Name: \(club.clubName), Intro: \(club.clubIntroduce)")
-                    Task {
-                        self.rankingView.configureData(clubs)
-                    }
+                Task {
+                    self.rankingView.configureData(clubs)
                 }
             } else {
                 print("데이터가 없습니다")

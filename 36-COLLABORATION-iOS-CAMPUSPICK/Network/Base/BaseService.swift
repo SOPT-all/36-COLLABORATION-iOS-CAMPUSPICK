@@ -20,7 +20,7 @@ class BaseService {
         
         
         // MARK: - ✅ 네트워크 Request 세팅
-
+        
         let url = target.url
         var request = URLRequest(url: url)
         request.httpMethod = target.method.key
@@ -54,10 +54,10 @@ class BaseService {
            let bodyString = String(data: body, encoding: .utf8) {
             Self.logger.debug("📦 Body: \(bodyString)")
         }
-
+        
         
         // MARK: - ✅ 네트워크 요청
-
+        
         do {
             let (data, response) = try await URLSession.shared.data(for: request)
             guard let httpResponse = response as? HTTPURLResponse else {
@@ -69,7 +69,7 @@ class BaseService {
             if let responseBody = String(data: data, encoding: .utf8) {
                 Self.logger.debug("📨 Response Body: \(responseBody)")
             }
-
+            
             switch httpResponse.statusCode {
             case 200...299:
                 do {
@@ -84,10 +84,8 @@ class BaseService {
                 }
             case 400:
                 return .failure(.badRequest)
-            case 401:
-                return .failure(.unauthorized)
-            case 404:
-                return .failure(.notFound)
+            case 405:
+                return .failure(.badRequest)
             case 500...599:
                 return .failure(.internalServerError)
             default:
@@ -97,7 +95,6 @@ class BaseService {
             Self.logger.error("❌ Network Error: \(error.localizedDescription)")
             return .failure(.networkFail)
         }
-        
         
     }
 }
