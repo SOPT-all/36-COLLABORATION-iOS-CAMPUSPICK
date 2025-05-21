@@ -14,6 +14,8 @@ class SearchViewController: UIViewController {
     
     // MARK: - Property
     
+    private let clubHeaderView = ClubHeaderView(type: .withOutCategory)
+    
     private let separatorLine = UIView().then {
         $0.backgroundColor = .gray4
     }
@@ -35,6 +37,7 @@ class SearchViewController: UIViewController {
         super.viewDidLoad()
         setStyle()
         setLayout()
+        addTarget()
     }
     
     
@@ -42,12 +45,18 @@ class SearchViewController: UIViewController {
     
     private func setStyle() {
         view.backgroundColor = .white
-        view.addSubviews(separatorLine, recentView, popularView, adImageView)
+        view.addSubviews(clubHeaderView, separatorLine, recentView, popularView, adImageView)
     }
     
     private func setLayout() {
+        clubHeaderView.snp.makeConstraints{
+            $0.top.equalToSuperview().inset(47)
+            $0.horizontalEdges.equalToSuperview()
+            $0.height.equalTo(114)
+        }
+        
         separatorLine.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(114)
+            $0.top.equalTo(clubHeaderView.snp.bottom)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(2)
         }
@@ -71,16 +80,25 @@ class SearchViewController: UIViewController {
         }
     }
     
-//    // 나중에쓸거
-//    @objc private func openModal() {
-//        let modalVC = SearchFilterModalViewController()
-////        let modalVC = SearchSortModalViewController()
-//        if let sheet = modalVC.sheetPresentationController {
-//            sheet.detents = [.custom(resolver: { _ in return 454 })]
-////            sheet.detents = [.custom(resolver: { _ in return 246 })]
-//            sheet.prefersGrabberVisible = true
-//            sheet.preferredCornerRadius = 15
-//        }
-//        present(modalVC, animated: true)
-//    }
+    
+    // MARK: - Function
+    
+    private func addTarget() {
+        clubHeaderView.filterButton.addTarget(self, action: #selector(openModal), for: .touchUpInside)
+        clubHeaderView.onSearchIconTapped = { [weak self] keyword in
+            guard let self else { return }
+            let vc = SearchResultViewController(keyword: keyword)
+            self.navigationController?.pushViewController(vc, animated: true)
+        }
+    }
+    
+    @objc private func openModal() {
+        let modalVC = SearchFilterModalViewController()
+        if let sheet = modalVC.sheetPresentationController {
+            sheet.detents = [.custom(resolver: { _ in return 454 })]
+            sheet.prefersGrabberVisible = true
+            sheet.preferredCornerRadius = 15
+        }
+        present(modalVC, animated: true)
+    }
 }

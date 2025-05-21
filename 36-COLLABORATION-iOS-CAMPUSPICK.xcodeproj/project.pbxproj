@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		337F26B92DDCF4780031DF49 /* ClubSortView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 337F26B82DDCF4610031DF49 /* ClubSortView.swift */; };
 		3384D83D2DD4D893003D2E1C /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3384D83C2DD4D88E003D2E1C /* SearchModel.swift */; };
 		3384D83F2DD4DC1B003D2E1C /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3384D83E2DD4DC0B003D2E1C /* SearchTableViewCell.swift */; };
 		3384D89B2DD4EAFB003D2E1C /* SearchResultViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3384D89A2DD4EAF1003D2E1C /* SearchResultViewController.swift */; };
@@ -65,6 +66,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		337F26B82DDCF4610031DF49 /* ClubSortView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClubSortView.swift; sourceTree = "<group>"; };
 		3384D83C2DD4D88E003D2E1C /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		3384D83E2DD4DC0B003D2E1C /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		3384D89A2DD4EAF1003D2E1C /* SearchResultViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultViewController.swift; sourceTree = "<group>"; };
@@ -307,6 +309,7 @@
 		6C99465F2DD0FBEC0016BF5B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				337F26B82DDCF4610031DF49 /* ClubSortView.swift */,
 				33B010D32DD611820081CB8E /* RecentSearchView.swift */,
 				33B010E12DD68FAE0081CB8E /* PopularSearchView.swift */,
 				33B010EC2DD6EA790081CB8E /* FilterView.swift */,
@@ -540,6 +543,7 @@
 				33B010E62DD6968E0081CB8E /* SearchSortModalViewController.swift in Sources */,
 				6C511F252DCCE59500DD3A53 /* UIStackView+.swift in Sources */,
 				3384D83F2DD4DC1B003D2E1C /* SearchTableViewCell.swift in Sources */,
+				337F26B92DDCF4780031DF49 /* ClubSortView.swift in Sources */,
 				33B010DC2DD65D490081CB8E /* DeadlineType.swift in Sources */,
 				6C3688022DD7078500DE281C /* ClubRankingCell.swift in Sources */,
 				6C511E472DCCE36100DD3A53 /* AppDelegate.swift in Sources */,
