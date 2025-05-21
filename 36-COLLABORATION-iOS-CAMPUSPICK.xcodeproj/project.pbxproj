@@ -464,8 +464,8 @@
 				F6C331922DDBB16900B8A2D5 /* EventPageView.swift */,
 			);
 			path = Cell;
-            sourceTree = "<group>";
-        };
+      sourceTree = "<group>";
+    };
 		6CB65AC32DDB92B000AD9BD1 /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -620,6 +620,11 @@
 				F6659CBA2DD7107F0018B574 /* MyPageViewController.swift in Sources */,
 				F6659CAE2DD65B280018B574 /* HomeViewController.swift in Sources */,
 				F6659CB02DD665310018B574 /* MainHeaderView.swift in Sources */,
+				3384D89B2DD4EAFB003D2E1C /* SearchResultViewController.swift in Sources */,
+				33B010EB2DD6E8500081CB8E /* FilterCollectionViewCell.swift in Sources */,
+				33B010D22DD60F450081CB8E /* SearchViewController.swift in Sources */,
+				33B010DE2DD67B9D0081CB8E /* RecentSearchCollectionViewCell.swift in Sources */,
+				6C511E3F2DCCBC6E00DD3A53 /* SceneDelegate.swift in Sources */,
 				3384D89B2DD4EAFB003D2E1C /* SearchResultViewController.swift in Sources */,
 				33B010EB2DD6E8500081CB8E /* FilterCollectionViewCell.swift in Sources */,
 				33B010D22DD60F450081CB8E /* SearchViewController.swift in Sources */,
