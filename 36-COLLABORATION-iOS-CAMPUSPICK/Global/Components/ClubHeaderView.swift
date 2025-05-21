@@ -11,7 +11,7 @@ import SnapKit
 import Then
 
 class ClubHeaderView: UIView {
-    private var headerTypeValue: HeaderType?
+    private var headerTypeValue: ClubHeaderType?
     
     // MARK: - Components
     
@@ -75,7 +75,7 @@ class ClubHeaderView: UIView {
     
     // MARK: - Life Cycle
 
-    init(type: HeaderType) {
+    init(type: ClubHeaderType) {
         self.headerTypeValue = type
         super.init(frame: .zero)
         
@@ -191,7 +191,7 @@ extension ClubHeaderView {
         print("뒤로 버튼 눌림")
     }
     
-    func headerType(type: HeaderType) {
+    func headerType(type: ClubHeaderType) {
         self.headerTypeValue = type
         switch type {
         case .withOutCategory:
