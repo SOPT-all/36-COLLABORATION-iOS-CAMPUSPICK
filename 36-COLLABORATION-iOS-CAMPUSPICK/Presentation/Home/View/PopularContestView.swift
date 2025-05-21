@@ -23,7 +23,7 @@ final class PopularContestView: UIView {
         $0.dataSource = self
         let layout = UICollectionViewFlowLayout()
         layout.scrollDirection = .horizontal
-        layout.itemSize = CGSize(width: 155, height: 217)
+        layout.itemSize = CGSize(width: 155, height: 172)
         layout.minimumLineSpacing = 12
         layout.minimumInteritemSpacing = 0
         layout.sectionInset = UIEdgeInsets(top: 0, left: 15, bottom: 0, right: 15)

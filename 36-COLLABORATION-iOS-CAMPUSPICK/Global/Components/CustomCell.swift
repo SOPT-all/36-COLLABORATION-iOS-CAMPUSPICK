@@ -93,6 +93,7 @@ final class CustomCell: UICollectionViewCell {
         titleLabel.snp.makeConstraints {
             $0.top.equalToSuperview().offset(5)
             $0.leading.equalToSuperview().offset(8)
+            $0.width.equalTo(150)
         }
         viewIconView.snp.makeConstraints {
             $0.leading.equalToSuperview().offset(8)
@@ -130,6 +131,8 @@ final class CustomCell: UICollectionViewCell {
 
         switch type {
         case .small:
+            imageHeightConstraint?.update(offset: CellType.small.imageHeight)
+            
             dDayLabel.isHidden = true
             commentIconView.isHidden = false
             commentLabel.isHidden = false
@@ -157,24 +160,26 @@ final class CustomCell: UICollectionViewCell {
             }
 
         case .big:
+            imageHeightConstraint?.update(offset: CellType.big.imageHeight)
+            
             dDayLabel.isHidden = false
             commentIconView.isHidden = true
             commentLabel.isHidden = true
 
             dDayLabel.snp.remakeConstraints {
-                $0.centerY.equalToSuperview().offset(1)
+                $0.top.equalTo(titleLabel.snp.bottom).offset(4)
                 $0.leading.equalToSuperview().offset(8)
             }
 
             viewIconView.snp.remakeConstraints {
-                $0.centerY.equalToSuperview().offset(1)
-                $0.trailing.equalTo(viewLabel.snp.leading).offset(-2)
+                $0.top.equalTo(titleLabel.snp.bottom).offset(4)
+                $0.leading.equalTo(dDayLabel.snp.trailing).offset(8)
                 $0.size.equalTo(12)
             }
 
             viewLabel.snp.remakeConstraints {
-                $0.centerY.equalToSuperview().offset(1)
-                $0.trailing.equalToSuperview().inset(8)
+                $0.top.equalTo(titleLabel.snp.bottom).offset(4)
+                $0.leading.equalTo(viewIconView.snp.trailing).offset(4)
             }
         }
     }

@@ -17,9 +17,7 @@ final class HomeViewController: UIViewController {
     private let headerView = MainHeaderView()
     private let bannerView = BannerView()
     private let mainIconView = MainIconView()
-    private let popularClubView = PopularClubView().then {
-        $0.backgroundColor = .gray2
-    }
+    private let popularClubView = PopularClubView()
     private let popularActivityView = PopularActivityView().then {
         $0.backgroundColor = .systemGreen
     }
@@ -82,7 +80,7 @@ final class HomeViewController: UIViewController {
         popularClubView.snp.makeConstraints {
             $0.top.equalTo(mainIconView.snp.bottom).offset(4)
             $0.horizontalEdges.equalToSuperview()
-            $0.height.equalTo(210)
+            $0.height.equalTo(290)
             $0.width.equalToSuperview()
         }
         popularActivityView.snp.makeConstraints {
