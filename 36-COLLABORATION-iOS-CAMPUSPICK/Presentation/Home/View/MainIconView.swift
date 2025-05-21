@@ -133,8 +133,8 @@ final class MainIconView: UIView {
     
     // MARK: - Target Method
     
+    /// 여기에 ClubViewController 연결하마마마자잠마
     @objc func clubIconButtonTap() {
-        print("버튼 눌림")
         let label = UILabel()
         label.backgroundColor = UIColor.black.withAlphaComponent(0.3)
         label.textColor = UIColor.white

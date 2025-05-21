@@ -39,9 +39,15 @@ final class CustomCell: UICollectionViewCell {
     private let commentLabel = UILabel().then {
         $0.textColor = .gray2
     }
+    private let dDayLabel = UILabel().then {
+        $0.textColor = .gray2
+    }
     
     private var imageHeightConstraint: Constraint?
 
+    
+    // MARK: - Life Cycle
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -54,6 +60,9 @@ final class CustomCell: UICollectionViewCell {
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
+    // MARK: - Setting Method
 
     private func setUI() {
         addSubviews(
@@ -66,7 +75,8 @@ final class CustomCell: UICollectionViewCell {
             viewIconView,
             viewLabel,
             commentIconView,
-            commentLabel
+            commentLabel,
+            dDayLabel
         )
     }
     
@@ -102,13 +112,70 @@ final class CustomCell: UICollectionViewCell {
             $0.centerY.equalTo(commentIconView.snp.centerY)
             $0.leading.equalTo(commentIconView.snp.trailing).offset(2)
         }
+        dDayLabel.snp.makeConstraints {
+            $0.height.equalTo(0)
+            $0.width.equalTo(0)
+        }
     }
-
-    func configure(with type: CellType, image: UIImage?, title: String, viewNum: String, commentNum: String) {
+    
+    // MARK: - Configure Method
+    
+    func configure(with type: CellType, image: UIImage?, title: String, viewNum: String, commentNum: String? = nil, dDay: String? = nil) {
         posterView.image = image
         titleLabel.attributedText = .sopt(title, style: .body0)
         viewLabel.attributedText = .sopt(viewNum, style: .caption3)
-        commentLabel.attributedText = .sopt(commentNum, style: .caption3)
+        commentLabel.attributedText = .sopt(commentNum ?? "??", style: .caption3)
+        dDayLabel.attributedText = .sopt(dDay ?? "D-??", style: .caption4)
         imageHeightConstraint?.update(offset: type.imageHeight)
+
+        switch type {
+        case .small:
+            dDayLabel.isHidden = true
+            commentIconView.isHidden = false
+            commentLabel.isHidden = false
+
+            viewIconView.snp.remakeConstraints {
+                $0.leading.equalToSuperview().offset(8)
+                $0.bottom.equalToSuperview().inset(9)
+                $0.size.equalTo(12)
+            }
+
+            viewLabel.snp.remakeConstraints {
+                $0.centerY.equalTo(viewIconView)
+                $0.leading.equalTo(viewIconView.snp.trailing).offset(2)
+            }
+
+            commentIconView.snp.remakeConstraints {
+                $0.centerY.equalTo(viewIconView)
+                $0.leading.equalTo(viewLabel.snp.trailing).offset(4)
+                $0.size.equalTo(12)
+            }
+
+            commentLabel.snp.remakeConstraints {
+                $0.centerY.equalTo(commentIconView)
+                $0.leading.equalTo(commentIconView.snp.trailing).offset(2)
+            }
+
+        case .big:
+            dDayLabel.isHidden = false
+            commentIconView.isHidden = true
+            commentLabel.isHidden = true
+
+            dDayLabel.snp.remakeConstraints {
+                $0.centerY.equalToSuperview().offset(1)
+                $0.leading.equalToSuperview().offset(8)
+            }
+
+            viewIconView.snp.remakeConstraints {
+                $0.centerY.equalToSuperview().offset(1)
+                $0.trailing.equalTo(viewLabel.snp.leading).offset(-2)
+                $0.size.equalTo(12)
+            }
+
+            viewLabel.snp.remakeConstraints {
+                $0.centerY.equalToSuperview().offset(1)
+                $0.trailing.equalToSuperview().inset(8)
+            }
+        }
     }
 }
