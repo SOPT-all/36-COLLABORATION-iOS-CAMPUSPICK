@@ -108,6 +108,6 @@ extension ClubSortView {
     @objc private func filterButtonTapped() {
         print("Filter button tapped")
         filterbuttonToggle.toggle()
-        filterButton.tintColor = self.filterbuttonToggle ? .blue : .gray2
+        filterButton.tintColor = self.filterbuttonToggle ? .mainBlue : .gray2
     }
 }
