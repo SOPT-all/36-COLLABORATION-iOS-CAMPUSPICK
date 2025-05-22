@@ -9,8 +9,13 @@ import UIKit
 import SnapKit
 import Then
 
-final class SearchFilterModalViewController: UIViewController {
+protocol FilterDataBindDelegate: AnyObject {
+    func filterDataBind(deadline: DeadlineType, region: RegionType, day: DayType)
+}
 
+final class SearchFilterModalViewController: UIViewController {
+    
+    weak var delegate: FilterDataBindDelegate?
     
     // MARK: - Property
     
@@ -25,6 +30,20 @@ final class SearchFilterModalViewController: UIViewController {
         super.viewDidLoad()
         setStyle()
         setLayout()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        let selectedDeadline = deadlineView.selectedOption ?? .all
+        let selectedRegion = regionView.selectedOption ?? .all
+        let selectedDay = dayView.selectedOption ?? .all
+
+        delegate?.filterDataBind(
+            deadline: selectedDeadline,
+            region: selectedRegion,
+            day: selectedDay
+        )
     }
     
     
