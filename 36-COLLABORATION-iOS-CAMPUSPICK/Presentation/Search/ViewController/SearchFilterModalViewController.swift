@@ -17,6 +17,7 @@ final class SearchFilterModalViewController: UIViewController {
     
     weak var delegate: FilterDataBindDelegate?
     
+    
     // MARK: - Property
     
     let deadlineView = FilterView<DeadlineType>(title: "마감 기한")
