@@ -27,3 +27,15 @@ enum DeadlineType: String, CaseIterable, FilterOptionType {
         }
     }
 }
+
+extension DeadlineType {
+    var serverValue: String? {
+        switch self {
+        case .all: return nil
+        case .under7: return "UNDER7"
+        case .over7: return "OVER7"
+        case .over14: return "OVER14"
+        case .over30: return "OVER30"
+        }
+    }
+}

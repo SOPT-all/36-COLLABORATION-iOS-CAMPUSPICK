@@ -33,3 +33,17 @@ enum DayType: String, CaseIterable, FilterOptionType {
         }
     }
 }
+
+extension DayType {
+    var serverValue: String? {
+        switch self {
+        case .all: return nil
+        case .monday: return "MONDAY"
+        case .tuesday: return "TUESDAY"
+        case .wednesday: return "WEDNESDAY"
+        case .thursday: return "THURSDAY"
+        case .friday: return "FRIDAY"
+        case .weekend: return "WEEKEND"
+        }
+    }
+}
