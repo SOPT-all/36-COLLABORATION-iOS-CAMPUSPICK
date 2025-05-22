@@ -11,8 +11,11 @@ import Then
 
 class SearchResultViewController: UIViewController {
     
-    private let keyword: String
-    private let searchData = SearchModel.dummy()
+    private var keyword: String
+    private var selectedDeadlineType: DeadlineType = .all
+    private var selectedRegion: RegionType = .all
+    private var selectedDay: DayType = .all
+    private var searchData: [SearchModel] = []
     
     init(keyword: String) {
         self.keyword = keyword
@@ -99,11 +102,19 @@ class SearchResultViewController: UIViewController {
     private func addTarget() {
         clubHeaderView.filterButton.addTarget(self, action: #selector(openFilterModal), for: .touchUpInside)
         clubHeaderView.setSearchKeyword(keyword)
+        clubHeaderView.onSearchIconTapped = { [weak self] keyword in
+            guard let self = self else { return }
+            self.keyword = keyword
+            Task {
+                await self.fetchSearchResult()
+            }
+        }
         clubSortView.bottomSheetButton.addTarget(self, action: #selector(openSortModal), for: .touchUpInside)
     }
     
     @objc private func openFilterModal() {
         let modalVC = SearchFilterModalViewController()
+        modalVC.delegate = self
         if let sheet = modalVC.sheetPresentationController {
             sheet.detents = [.custom(resolver: { _ in return 454 })]
             sheet.prefersGrabberVisible = true
@@ -141,5 +152,43 @@ extension SearchResultViewController: UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as? SearchTableViewCell else { return UITableViewCell() }
         cell.dataBind(data: searchData[indexPath.row])
         return cell
+    }
+}
+
+extension SearchResultViewController: FilterDataBindDelegate {
+    func filterDataBind(deadline: DeadlineType, region: RegionType, day: DayType) {
+        self.selectedDeadlineType = deadline
+        self.selectedRegion = region
+        self.selectedDay = day
+        Task {
+            await self.fetchSearchResult()
+        }
+    }
+}
+
+// MARK: - NETWORK
+
+extension SearchResultViewController {
+    func fetchSearchResult() async {
+        let result = await NetworkService.shared.clubService.searchClubs(title: keyword, category: nil, deadlineType: selectedDeadlineType.serverValue, region: selectedRegion.serverValue, clubDay: selectedDay.serverValue)
+
+        switch result {
+        case .success(let data):
+            print("✅ Club Ranking Data:")
+            if let clubs = data.data {
+                self.searchData = clubs.map {SearchModel(from: $0)}
+                DispatchQueue.main.async {
+                    self.searchTableView.reloadData()
+                }
+                for club in clubs {
+                    print("클럽 정보: \(club.clubInfo), \(club.recruitPost)")
+                }
+            } else {
+                print("데이터가 없습니다")
+            }
+
+        case .failure(let error):
+            print("❌ Error fetching club ranking: \(error)")
+        }
     }
 }
