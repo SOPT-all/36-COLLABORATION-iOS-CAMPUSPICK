@@ -11,6 +11,7 @@ import Then
 
 final class HomeViewController: UIViewController {
     
+    private let service: HomeServiceProtocol = HomeService()
     
     // MARK: - Properties
     
@@ -18,9 +19,7 @@ final class HomeViewController: UIViewController {
     private let bannerView = BannerView()
     private let mainIconView = MainIconView()
     private let popularClubView = PopularClubView()
-    private let popularActivityView = PopularActivityView().then {
-        $0.backgroundColor = .systemGreen
-    }
+    private let popularActivityView = PopularActivityView()
     private let popularContestView = PopularContestView()
     private let eventView = EventView()
     
@@ -34,6 +33,9 @@ final class HomeViewController: UIViewController {
         
         setUI()
         setLayout()
+        Task { @MainActor in
+            await fetchHomeData()   
+        }
     }
     
     
@@ -68,7 +70,7 @@ final class HomeViewController: UIViewController {
         bannerView.snp.makeConstraints {
             $0.top.equalToSuperview()
             $0.leading.equalToSuperview()
-            $0.height.equalTo(145)
+            $0.height.equalTo(150)
             $0.width.equalTo(scrollView.snp.width)
         }
         mainIconView.snp.makeConstraints {
@@ -80,13 +82,13 @@ final class HomeViewController: UIViewController {
         popularClubView.snp.makeConstraints {
             $0.top.equalTo(mainIconView.snp.bottom).offset(4)
             $0.horizontalEdges.equalToSuperview()
-            $0.height.equalTo(290)
+            $0.height.equalTo(233)
             $0.width.equalToSuperview()
         }
         popularActivityView.snp.makeConstraints {
             $0.top.equalTo(popularClubView.snp.bottom)
             $0.horizontalEdges.equalToSuperview()
-            $0.height.equalTo(210)
+            $0.height.equalTo(233)
             $0.width.equalToSuperview()
         }
         popularContestView.snp.makeConstraints {
@@ -104,4 +106,53 @@ final class HomeViewController: UIViewController {
         }
     }
     
+}
+
+
+@MainActor
+extension HomeViewController {
+    func fetchHomeData() async {
+        let clubResult = await NetworkService.shared.homeService.getPopularClubs()
+        
+        switch clubResult {
+        case .success(let dto):
+            let list = dto.data ?? []
+            let clubModels: [ClubModel] = list.compactMap { (item: PopularData) -> ClubModel? in
+                guard let uiImage = UIImage(named: item.image) else {
+                    print("이미지 로드 실패:", item.image)
+                    return nil    // Optional 반환이 가능
+                }
+                return ClubModel(
+                    image: uiImage,
+                    title: item.title,
+                    viewNum: item.viewCount,
+                    commentNum: item.commentCount
+                )
+            }
+            popularClubView.update(with: clubModels)
+
+        case .failure(let error):
+            print("❌ 인기 클럽 로드 실패:", error)
+        }
+
+        let activityResult = await NetworkService.shared.homeService.getPopularActivities()
+        
+        switch activityResult {
+        case .success(let dto):
+            let list = dto.data ?? []
+            let activityModels: [ActivityModel] = list.compactMap { (item: PopularData) -> ActivityModel? in
+                guard let uiImage = UIImage(named: item.image) else { return nil }
+                return ActivityModel(
+                    image: uiImage,
+                    title: item.title,
+                    viewNum: item.viewCount,
+                    commentNum: item.commentCount
+                )
+            }
+            popularActivityView.update(with: activityModels)
+
+        case .failure(let error):
+            print("❌ 인기 활동 로드 실패:", error)
+        }
+    }
 }

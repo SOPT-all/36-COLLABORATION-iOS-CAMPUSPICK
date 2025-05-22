@@ -18,25 +18,25 @@ final class BannerView: UIView {
     private let imageView1 = UIImageView().then {
         $0.image = .homeEduImage1
         $0.contentMode = .scaleAspectFill
-        $0.layer.cornerRadius = 6
+        $0.layer.cornerRadius = 8
         $0.clipsToBounds = true
     }
     private let imageView2 = UIImageView().then {
         $0.image = .homeEduImage2
         $0.contentMode = .scaleAspectFill
-        $0.layer.cornerRadius = 6
+        $0.layer.cornerRadius = 8
         $0.clipsToBounds = true
     }
     private let imageView3 = UIImageView().then {
         $0.image = .homeEduImage3
         $0.contentMode = .scaleAspectFill
-        $0.layer.cornerRadius = 6
+        $0.layer.cornerRadius = 8
         $0.clipsToBounds = true
     }
     private let imageView4 = UIImageView().then {
         $0.image = .homeEduImage4
         $0.contentMode = .scaleAspectFill
-        $0.layer.cornerRadius = 6
+        $0.layer.cornerRadius = 8
         $0.clipsToBounds = true
     }
     private lazy var imageViews = [imageView1, imageView2, imageView3, imageView4]
