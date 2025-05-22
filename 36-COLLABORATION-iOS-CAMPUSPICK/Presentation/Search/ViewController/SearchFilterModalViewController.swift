@@ -16,7 +16,10 @@ protocol FilterDataBindDelegate: AnyObject {
 final class SearchFilterModalViewController: UIViewController {
     
     weak var delegate: FilterDataBindDelegate?
-    
+    private var initialDeadline: DeadlineType = .all
+    private var initialRegion: RegionType = .all
+    private var initialDay: DayType = .all
+
     
     // MARK: - Property
     
@@ -31,6 +34,10 @@ final class SearchFilterModalViewController: UIViewController {
         super.viewDidLoad()
         setStyle()
         setLayout()
+        
+        deadlineView.setSelected(option: initialDeadline)
+        regionView.setSelected(option: initialRegion)
+        dayView.setSelected(option: initialDay)
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -73,5 +80,14 @@ final class SearchFilterModalViewController: UIViewController {
             $0.leading.trailing.equalToSuperview().inset(15)
             $0.height.equalTo(99)
         }
+    }
+    
+    
+    // MARK: - Function
+    
+    func configure(deadline: DeadlineType, region: RegionType, day: DayType) {
+        self.initialDeadline = deadline
+        self.initialRegion = region
+        self.initialDay = day
     }
 }

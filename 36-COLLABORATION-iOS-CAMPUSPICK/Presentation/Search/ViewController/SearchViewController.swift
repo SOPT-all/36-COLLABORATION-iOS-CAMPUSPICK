@@ -11,6 +11,10 @@ import Then
 
 class SearchViewController: UIViewController {
     
+    private var selectedDeadlineType: DeadlineType = .all
+    private var selectedRegion: RegionType = .all
+    private var selectedDay: DayType = .all
+
     
     // MARK: - Property
     
@@ -94,11 +98,20 @@ class SearchViewController: UIViewController {
     
     @objc private func openModal() {
         let modalVC = SearchFilterModalViewController()
+        modalVC.configure(deadline: selectedDeadlineType, region: selectedRegion, day: selectedDay)
         if let sheet = modalVC.sheetPresentationController {
             sheet.detents = [.custom(resolver: { _ in return 454 })]
             sheet.prefersGrabberVisible = true
             sheet.preferredCornerRadius = 15
         }
         present(modalVC, animated: true)
+    }
+}
+
+extension SearchViewController: FilterDataBindDelegate {
+    func filterDataBind(deadline: DeadlineType, region: RegionType, day: DayType) {
+        self.selectedDeadlineType = deadline
+        self.selectedRegion = region
+        self.selectedDay = day
     }
 }

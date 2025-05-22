@@ -117,6 +117,7 @@ class SearchResultViewController: UIViewController {
     
     @objc private func openFilterModal() {
         let modalVC = SearchFilterModalViewController()
+        modalVC.configure(deadline: selectedDeadlineType, region: selectedRegion, day: selectedDay)
         modalVC.delegate = self
         if let sheet = modalVC.sheetPresentationController {
             sheet.detents = [.custom(resolver: { _ in return 454 })]
