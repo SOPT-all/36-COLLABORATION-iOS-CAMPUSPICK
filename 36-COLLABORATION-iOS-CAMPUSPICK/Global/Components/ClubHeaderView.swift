@@ -194,6 +194,8 @@ class ClubHeaderView: UIView {
 
 extension ClubHeaderView {
     @objc private func backButtonTapped() {
+        let vc = self.findViewController()
+        vc?.navigationController?.popViewController(animated: true)
         print("뒤로 버튼 눌림")
     }
     
