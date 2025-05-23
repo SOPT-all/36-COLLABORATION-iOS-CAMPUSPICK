@@ -121,11 +121,11 @@ final class CustomCell: UICollectionViewCell {
     
     // MARK: - Configure Method
     
-    func configure(with type: CellType, image: UIImage?, title: String, viewNum: String, commentNum: String? = nil, dDay: String? = nil) {
+    func configure(with type: CellType, image: UIImage?, title: String, viewNum: Int, commentNum: Int, dDay: String? = nil) {
         posterView.image = image
         titleLabel.attributedText = .sopt(title, style: .body0)
-        viewLabel.attributedText = .sopt(viewNum, style: .caption3)
-        commentLabel.attributedText = .sopt(commentNum ?? "??", style: .caption3)
+        viewLabel.attributedText = .sopt("\(viewNum)", style: .caption3)
+        commentLabel.attributedText = .sopt("\(commentNum)", style: .caption3)
         dDayLabel.attributedText = .sopt(dDay ?? "D-??", style: .caption4)
         imageHeightConstraint?.update(offset: type.imageHeight)
 
