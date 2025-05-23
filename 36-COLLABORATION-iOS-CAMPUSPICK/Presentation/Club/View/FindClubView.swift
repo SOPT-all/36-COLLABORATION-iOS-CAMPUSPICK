@@ -15,7 +15,8 @@ class FindClubView: UIView {
     // MARK: - Property
 
     private var filterbuttonToggle: Bool = false
-    
+    var searchData: [SearchModel] = []
+
     
     // MARK: - Components
 
@@ -61,6 +62,8 @@ class FindClubView: UIView {
         $0.imageView?.contentMode = .scaleAspectFit
     }
     
+    let searchTableView = UITableView(frame: .zero, style: .plain)
+    
     
     // MARK: - Life Cycle
 
@@ -72,6 +75,7 @@ class FindClubView: UIView {
         setUI()
         setLayout()
         setAddTarget()
+        setDelegate()
     }
     
     required init?(coder: NSCoder) {
@@ -82,7 +86,7 @@ class FindClubView: UIView {
     // MARK: - Setting Method
 
     private func setUI() {
-        self.addSubviews(titleLabel, filterLabel, filterButton, seperator, localLabel, localButton, bottomSheetLabel, bottomSheetButton)
+        self.addSubviews(titleLabel, filterLabel, filterButton, seperator, localLabel, localButton, bottomSheetLabel, bottomSheetButton, searchTableView)
     }
     
     private func setLayout() {
@@ -130,6 +134,12 @@ class FindClubView: UIView {
             $0.centerY.equalTo(titleLabel)
             $0.size.equalTo(12)
         }
+        
+        searchTableView.snp.makeConstraints {
+            $0.top.equalTo(titleLabel.snp.bottom).offset(25)
+            $0.horizontalEdges.equalToSuperview()
+            $0.bottom.equalToSuperview()
+        }
     }
     
     private func setAddTarget() {
@@ -138,6 +148,14 @@ class FindClubView: UIView {
         bottomSheetButton.addTarget(self, action: #selector(bottomSheetButtonTapped), for: .touchUpInside)
     }
 
+    private func setDelegate() {
+        searchTableView.do {
+            $0.delegate = self
+            $0.dataSource = self
+            $0.separatorStyle = .none
+            $0.register(SearchTableViewCell.self, forCellReuseIdentifier: SearchTableViewCell.identifier)
+        }
+    }
 }
 
 
@@ -156,5 +174,24 @@ extension FindClubView {
 
     @objc private func bottomSheetButtonTapped() {
         print("Bottom sheet button tapped")
+    }
+}
+
+
+extension FindClubView: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 161
+    }
+}
+
+extension FindClubView: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return searchData.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: SearchTableViewCell.identifier, for: indexPath) as? SearchTableViewCell else { return UITableViewCell() }
+        cell.dataBind(data: searchData[indexPath.row])
+        return cell
     }
 }

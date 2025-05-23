@@ -56,6 +56,7 @@ final class ClubViewController: UIViewController {
         Task {
             await fetchClubRanking()
             await fetchPopularClub()
+            await fetchSearchResult()
         }
     }
     
@@ -123,7 +124,7 @@ final class ClubViewController: UIViewController {
         findClubView.snp.makeConstraints {
             $0.top.equalTo(seperatorView3.snp.bottom)
             $0.horizontalEdges.equalToSuperview()
-            $0.height.equalTo(1655)
+            $0.height.equalTo(1350)
         }
         
         pageImage.snp.makeConstraints {
@@ -134,6 +135,8 @@ final class ClubViewController: UIViewController {
             $0.bottom.equalToSuperview().inset(30)
         }
     }
+    
+
 
 }
 
@@ -181,6 +184,29 @@ extension ClubViewController {
 
         case .failure(let error):
             print("❌ 인기 클럽 로드 실패:", error)
+        }
+    }
+    
+    func fetchSearchResult() async {
+        let result = await NetworkService.shared.clubService.searchClubs(title: "", category: "", deadlineType: "", region: "", clubDay: "")
+
+        switch result {
+        case .success(let data):
+            print("✅ Club Ranking Data:")
+            if let clubs = data.data {
+                findClubView.searchData = clubs.map {SearchModel(from: $0)}
+                DispatchQueue.main.async {
+                    self.findClubView.searchTableView.reloadData()
+                }
+                for club in clubs {
+                    print("클럽 정보: \(club.clubInfo), \(club.recruitPost)")
+                }
+            } else {
+                print("데이터가 없습니다")
+            }
+
+        case .failure(let error):
+            print("❌ Error fetching club ranking: \(error)")
         }
     }
     
