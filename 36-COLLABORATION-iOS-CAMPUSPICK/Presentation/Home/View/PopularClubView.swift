@@ -11,13 +11,11 @@ import Then
 
 final class PopularClubView: UIView {
     
+    private var cellType: CellType
     private var clubList: [ClubModel] = []
     
     // MARK: - Properties
     
-    private let titleLabel = UILabel().then {
-        $0.attributedText = .sopt("인기 동아리", style: .heading1)
-    }
     private lazy var clubCollectionView = UICollectionView(frame: .zero, collectionViewLayout: UICollectionViewFlowLayout()).then {
         $0.register(CustomCell.self, forCellWithReuseIdentifier: CustomCell.cellIdentifier)
         $0.delegate = self
@@ -38,7 +36,8 @@ final class PopularClubView: UIView {
     
     // MARK: - Init
     
-    override init(frame: CGRect) {
+    init(frame: CGRect, type: CellType) {
+        cellType = type
         super.init(frame: frame)
         
         setUI()
@@ -53,18 +52,13 @@ final class PopularClubView: UIView {
     
     private func setUI() {
         self.addSubviews(
-            titleLabel,
             clubCollectionView
         )
     }
     
     private func setLayout() {
-        titleLabel.snp.makeConstraints {
-            $0.top.equalToSuperview().inset(4)
-            $0.leading.equalToSuperview().inset(15)
-        }
         clubCollectionView.snp.makeConstraints {
-            $0.top.equalTo(titleLabel.snp.bottom)
+            $0.top.equalToSuperview().inset(4)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(217)
         }
@@ -102,6 +96,6 @@ extension PopularClubView: UICollectionViewDataSource, UICollectionViewDelegateF
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 155, height: CellType.small.cellHeight)
+        return CGSize(width: 155, height: cellType.cellHeight)
     }
 }

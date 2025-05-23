@@ -215,7 +215,8 @@ extension ClubHeaderView {
     }
     
     @objc private func searchBarTapped() {
-        // 네비게이션 이동
+        let vc = self.findViewController()
+        vc?.navigationController?.pushViewController(SearchViewController(), animated: true)
         print("검색창 네비게이션 클릭")
     }
     
