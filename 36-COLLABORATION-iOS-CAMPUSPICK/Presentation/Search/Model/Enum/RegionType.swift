@@ -42,3 +42,20 @@ enum RegionType: String, CaseIterable, FilterOptionType {
         }
     }
 }
+
+extension RegionType {
+    var serverValue: String? {
+        switch self {
+        case .all: return nil
+        case .capitalRegion: return "CAPITAL_REGION"
+        case .chungcheongDaejeon: return "CHUNGCHEONG_DAEJEON"
+        case .jeonbuk: return "JEONBUK"
+        case .jeonnamGwangju: return "JEONNAM_GWANGJU"
+        case .gyeongbukDaegu: return "GYEONGBUK_DAEGU"
+        case .gyeongnamBusanUlsan: return "GYEONGNAM_BUSAN_ULSAN"
+        case .gangwon: return "GANGWON"
+        case .jeju: return "JEJU"
+        case .etc: return "ETC"
+        }
+    }
+}

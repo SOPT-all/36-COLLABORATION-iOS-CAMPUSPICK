@@ -9,11 +9,11 @@ import UIKit
 import SnapKit
 import Then
 
-final class FilterView<T: FilterOptionType & CaseIterable>: UIView, UICollectionViewDataSource, UICollectionViewDelegate{
+final class FilterView<T: FilterOptionType & CaseIterable & Equatable>: UIView, UICollectionViewDataSource, UICollectionViewDelegate{
 
     private let keywords: [T] = T.allCases as! [T]
     private var titleText: String
-    private var selectedOption: T?
+    var selectedOption: T?
     var onSelectionChanged: ((T) -> Void)?
     
     
@@ -84,5 +84,22 @@ final class FilterView<T: FilterOptionType & CaseIterable>: UIView, UICollection
         let option = keywords[indexPath.item]
         cell.dataBind(data: option)
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        let option = keywords[indexPath.item]
+        selectedOption = option
+        onSelectionChanged?(option)
+    }
+}
+
+extension FilterView {
+    func setSelected(option: T) {
+        selectedOption = option
+
+        if let index = keywords.firstIndex(of: option) {
+            let indexPath = IndexPath(item: index, section: 0)
+            collectionView.selectItem(at: indexPath, animated: false, scrollPosition: [])
+        }
     }
 }
