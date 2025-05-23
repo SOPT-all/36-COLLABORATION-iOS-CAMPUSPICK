@@ -22,7 +22,10 @@ final class ClubViewController: UIViewController {
     private let seperatorView1 = UIView().then {
         $0.backgroundColor = .gray4
     }
-    private var popularView = PopularView()
+    private let popularLabel = UILabel().then {
+        $0.attributedText = .sopt("인기 모집 공고", style: .heading1)
+    }
+    private var popularView = PopularClubView(frame: .zero, type: .big)
     private let seperatorView2 = UIView().then {
         $0.backgroundColor = .gray4
     }
@@ -52,6 +55,8 @@ final class ClubViewController: UIViewController {
         self.navigationController?.isNavigationBarHidden = true
         Task {
             await fetchClubRanking()
+            await fetchPopularClub()
+            await fetchSearchResult()
         }
     }
     
@@ -61,7 +66,7 @@ final class ClubViewController: UIViewController {
     private func setUI() {
         self.view.addSubview(scrollview)
         scrollview.addSubview(contentView)
-        contentView.addSubviews(headerView, seperatorView1, popularView, seperatorView2, rankingView, seperatorView3, findClubView, pageImage)
+        contentView.addSubviews(headerView, seperatorView1, popularLabel, popularView, seperatorView2, rankingView, seperatorView3, findClubView, pageImage)
     }
     
     private func setLayout() {
@@ -86,10 +91,16 @@ final class ClubViewController: UIViewController {
             $0.height.equalTo(7)
         }
         
+        popularLabel.snp.makeConstraints {
+            $0.top.equalTo(seperatorView1.snp.bottom).offset(20)
+            $0.leading.equalToSuperview().inset(15)
+            $0.height.equalTo(35)
+        }
+        
         popularView.snp.makeConstraints {
-            $0.top.equalTo(seperatorView1.snp.bottom)
+            $0.top.equalTo(popularLabel.snp.bottom)
             $0.horizontalEdges.equalToSuperview()
-            $0.height.equalTo(303)
+            $0.height.equalTo(245)
         }
         
         seperatorView2.snp.makeConstraints {
@@ -113,7 +124,7 @@ final class ClubViewController: UIViewController {
         findClubView.snp.makeConstraints {
             $0.top.equalTo(seperatorView3.snp.bottom)
             $0.horizontalEdges.equalToSuperview()
-            $0.height.equalTo(1655)
+            $0.height.equalTo(1350)
         }
         
         pageImage.snp.makeConstraints {
@@ -124,6 +135,8 @@ final class ClubViewController: UIViewController {
             $0.bottom.equalToSuperview().inset(30)
         }
     }
+    
+
 
 }
 
@@ -148,4 +161,54 @@ extension ClubViewController {
             print("❌ Error fetching club ranking: \(error)")
         }
     }
+    
+    func fetchPopularClub() async {
+        let clubResult = await NetworkService.shared.homeService.getPopularClubs()
+        
+        switch clubResult {
+        case .success(let dto):
+            let list = dto.data ?? []
+            let clubModels: [ClubModel] = list.compactMap { (item: PopularData) -> ClubModel? in
+                guard let uiImage = UIImage(named: item.image) else {
+                    print("이미지 로드 실패:", item.image)
+                    return nil    // Optional 반환이 가능
+                }
+                return ClubModel(
+                    image: uiImage,
+                    title: item.title,
+                    viewNum: item.viewCount,
+                    commentNum: item.commentCount
+                )
+            }
+            popularView.update(with: clubModels)
+
+        case .failure(let error):
+            print("❌ 인기 클럽 로드 실패:", error)
+        }
+    }
+    
+    func fetchSearchResult() async {
+        let result = await NetworkService.shared.clubService.searchClubs(title: "", category: "", deadlineType: "", region: "", clubDay: "")
+
+        switch result {
+        case .success(let data):
+            print("✅ Club Ranking Data:")
+            if let clubs = data.data {
+                findClubView.searchData = clubs.map {SearchModel(from: $0)}
+                DispatchQueue.main.async {
+                    self.findClubView.searchTableView.reloadData()
+                }
+                for club in clubs {
+                    print("클럽 정보: \(club.clubInfo), \(club.recruitPost)")
+                }
+            } else {
+                print("데이터가 없습니다")
+            }
+
+        case .failure(let error):
+            print("❌ Error fetching club ranking: \(error)")
+        }
+    }
+    
+
 }

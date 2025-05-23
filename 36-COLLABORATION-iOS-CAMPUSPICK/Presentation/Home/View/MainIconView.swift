@@ -135,34 +135,7 @@ final class MainIconView: UIView {
     
     /// 여기에 ClubViewController 연결하마마마자잠마
     @objc func clubIconButtonTap() {
-        let label = UILabel()
-        label.backgroundColor = UIColor.black.withAlphaComponent(0.3)
-        label.textColor = UIColor.white
-        label.textAlignment = .center
-        label.text = "동아리 버튼 눌림!!"
-        label.alpha = 0.0
-        label.layer.cornerRadius = 10
-        label.clipsToBounds = true
-        
-        self.addSubview(label)
-        
-        label.snp.makeConstraints {
-            $0.centerX.equalToSuperview()
-            $0.top.equalTo(self.safeAreaLayoutGuide.snp.top).offset(40)
-            $0.width.equalToSuperview().multipliedBy(0.6)
-            $0.height.equalTo(35)
-        }
-        
-        UIView.animate(withDuration: 1.0, delay: 0.0, options: .curveEaseIn, animations: {
-            label.alpha = 1.0
-        }, completion: { _ in
-            
-            
-            UIView.animate(withDuration: 1.0, delay: 0.5, options: .curveEaseOut, animations: {
-                label.alpha = 0.0
-            }, completion: { _ in
-                label.removeFromSuperview()
-            })
-        })
+        let vc = self.findViewController()
+        vc?.navigationController?.pushViewController(ClubViewController(), animated: true)
     }
 }

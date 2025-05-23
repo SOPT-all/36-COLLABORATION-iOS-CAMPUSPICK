@@ -18,10 +18,13 @@ final class HomeViewController: UIViewController {
     private let headerView = MainHeaderView()
     private let bannerView = BannerView()
     private let mainIconView = MainIconView()
-    private let popularClubView = PopularClubView()
+    private let popularClubView = PopularClubView(frame: .zero, type: .small)
     private let popularActivityView = PopularActivityView()
     private let popularContestView = PopularContestView()
     private let eventView = EventView()
+    private let titleLabel = UILabel().then {
+        $0.attributedText = .sopt("인기 동아리", style: .heading1)
+    }
     
     private let scrollView = UIScrollView()
     
@@ -49,6 +52,7 @@ final class HomeViewController: UIViewController {
         scrollView.addSubviews(
             bannerView,
             mainIconView,
+            titleLabel,
             popularClubView,
             popularActivityView,
             popularContestView,
@@ -79,10 +83,14 @@ final class HomeViewController: UIViewController {
             $0.height.equalTo(80)
             $0.width.equalToSuperview()
         }
+        titleLabel.snp.makeConstraints {
+            $0.top.equalTo(mainIconView.snp.bottom).offset(14)
+            $0.leading.equalToSuperview().offset(15)
+        }
         popularClubView.snp.makeConstraints {
-            $0.top.equalTo(mainIconView.snp.bottom).offset(4)
+            $0.top.equalTo(mainIconView.snp.bottom).offset(20)
             $0.horizontalEdges.equalToSuperview()
-            $0.height.equalTo(233)
+            $0.height.equalTo(215)
             $0.width.equalToSuperview()
         }
         popularActivityView.snp.makeConstraints {
