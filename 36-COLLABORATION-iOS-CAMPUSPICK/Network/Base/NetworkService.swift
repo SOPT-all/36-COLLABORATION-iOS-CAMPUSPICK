@@ -14,5 +14,5 @@ final class NetworkService {
     private init() { }
     
     let clubService: ClubServiceProtocol = ClubService()
-    
+    let homeService: HomeServiceProtocol = HomeService()
 }

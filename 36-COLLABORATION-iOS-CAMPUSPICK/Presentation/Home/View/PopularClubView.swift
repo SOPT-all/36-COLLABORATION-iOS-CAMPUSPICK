@@ -11,6 +11,7 @@ import Then
 
 final class PopularClubView: UIView {
     
+    private var clubList: [ClubModel] = []
     
     // MARK: - Properties
     
@@ -63,7 +64,7 @@ final class PopularClubView: UIView {
             $0.leading.equalToSuperview().inset(15)
         }
         clubCollectionView.snp.makeConstraints {
-            $0.top.equalTo(titleLabel.snp.bottom).offset(8)
+            $0.top.equalTo(titleLabel.snp.bottom)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(217)
         }
@@ -71,22 +72,22 @@ final class PopularClubView: UIView {
 }
 
 extension CustomCell {
-    func configure(with type: CellType = .big, model: ClubModel) {
+    func configure(with type: CellType = .small, model: ClubModel) {
         configure(
             with: type,
             image: model.image,
             title: model.title,
             viewNum: model.viewNum,
-            dDay: model.dDay
+            commentNum: model.commentNum
         )
     }
 }
 
 extension PopularClubView: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
-    
-    private var clubList: [ClubModel] {
-        return ClubModel.dummy()
-    }
+    func update(with list: [ClubModel]) {
+            self.clubList = list
+            clubCollectionView.reloadData()
+        }
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return clubList.count
@@ -96,11 +97,11 @@ extension PopularClubView: UICollectionViewDataSource, UICollectionViewDelegateF
         guard let cell = collectionView.dequeueReusableCell(withReuseIdentifier: CustomCell.cellIdentifier, for: indexPath) as? CustomCell else {
             return UICollectionViewCell()
         }
-        cell.configure(with: .big, model: clubList[indexPath.item])
+        cell.configure(with: .small, model: clubList[indexPath.item])
         return cell
     }
 
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 155, height: CellType.big.cellHeight)
+        return CGSize(width: 155, height: CellType.small.cellHeight)
     }
 }
