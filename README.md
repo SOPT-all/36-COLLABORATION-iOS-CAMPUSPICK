@@ -35,7 +35,7 @@
 
 ||홈|동아리|검색|
 |:--:|:--:|:--:|:--:|
-|GIF|<img src = "https://github.com/user-attachments/assets/0a500768-14b4-42a6-a397-ec03480f8b10" width ="250">|<img src = "https://github.com/user-attachments/assets/ed32968c-684a-45e7-b580-85d5f11dcc79" width ="250">|<img src = "https://github.com/user-attachments/assets/29e4d324-ebfe-498d-9365-af42c7d64b36" width ="250">|
+|GIF|<img src = "https://github.com/user-attachments/assets/0a500768-14b4-42a6-a397-ec03480f8b10" width ="210">|<img src = "https://github.com/user-attachments/assets/ed32968c-684a-45e7-b580-85d5f11dcc79" width ="210">|<img src = "https://github.com/user-attachments/assets/29e4d324-ebfe-498d-9365-af42c7d64b36" width ="210">|
 
 <br/>
 
