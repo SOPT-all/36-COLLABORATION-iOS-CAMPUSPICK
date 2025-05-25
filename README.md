@@ -1,12 +1,12 @@
-<div align="center">
-  <img width="100%" src="https://capsule-render.vercel.app/api?type=soft&color=0:50BCDF,100:2b2e38&height=100&text=🎓%2036%20COLLABORATION%20iOS%20CAMPUSPICK%20🍎&animation=&fontColor=ffffff&fontSize=40" />
+# 대학생 SNS 캠퍼스픽 - iOS 🍎 
+
+**36 AT SOPT 합동세미나 캠퍼스픽 이용 플로우 개선 프로젝트**
 
 <div align="left">
     <div>
         <img width="100%" src="https://github.com/user-attachments/assets/b66fbf25-9834-4166-821a-4c4959a2bf78">
     </div>
 
-  **36 AT SOPT 합동세미나 캠퍼스픽 이용 플로우 개선 프로젝트**
 </div>
 
 
