@@ -29,6 +29,7 @@
 <img width="2477" src="https://github.com/user-attachments/assets/5efe2edd-cfbd-47c0-b91e-1422cd3553ee" />
 
 <br/>
+<br/>
 
 ## 🎬 시연 영상
 
@@ -38,7 +39,7 @@
 
 <br/>
 
-## 😺 Code Convention
+## 🧄 Code Convention
 [🔗 Code Convention](https://www.notion.so/sopt-official/1ed1e48dd96080dcb00cf00843b465a7?pvs=4)
 [⚠️ Issue Convention](https://www.notion.so/sopt-official/268096f1ae7040c2805a8174ae3eadd3?pvs=4)
 [🦑 PR Convention](https://www.notion.so/sopt-official/3efb1728a65648b4a1175b20bc5ac05f?pvs=4)
@@ -64,7 +65,7 @@ self/강제 언래핑 지양, 긴 View는 extension으로 분리
 
 <br/>
 
-## 😺 Foldering
+## 📁 Foldering
 ```
 📁 Project
 ├── 📁 Applacation
