@@ -1,13 +1,13 @@
 # 대학생 SNS 캠퍼스픽 - iOS 🍎 
 
-**36 AT SOPT 합동세미나 캠퍼스픽 이용 플로우 개선 프로젝트**
-
 <div align="left">
     <div>
         <img width="100%" src="https://github.com/user-attachments/assets/b66fbf25-9834-4166-821a-4c4959a2bf78">
     </div>
 
 </div>
+
+**36 AT SOPT 합동세미나 캠퍼스픽 이용 플로우 개선 프로젝트**
 
 
 </br>
